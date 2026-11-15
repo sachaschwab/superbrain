@@ -1,0 +1,14 @@
+{
+  "name": "superbrain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-generated language-learning audio: Claude writes the lesson, ElevenLabs speaks it.",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "node --env-file=.env --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}
