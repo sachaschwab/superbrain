@@ -71,7 +71,8 @@ async function generateLesson({ language, level, topic, count }) {
   const prompt = [
     `Create a ${level || 'beginner'} ${language} lesson with exactly ${n} phrases about: ${topic || 'everyday conversation'}.`,
     'Phrases should be natural, things a real person would say, ordered from simpler to harder.',
-    'Keep each phrase short enough to repeat after one listen. Use the save_lesson tool.',
+    'Keep each phrase short enough to repeat after one listen.',
+    'Respond only by calling the save_lesson tool.',
   ].join('\n');
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -83,18 +84,28 @@ async function generateLesson({ language, level, topic, count }) {
     },
     body: JSON.stringify({
       model: ANTHROPIC_MODEL,
-      max_tokens: 4000,
+      max_tokens: 8000,
       tools: [lessonTool],
-      tool_choice: { type: 'tool', name: 'save_lesson' },
+      tool_choice: { type: 'auto' }, // some models reject forced tool_choice
       messages: [{ role: 'user', content: prompt }],
     }),
   });
 
   if (!res.ok) throw httpError(res.status, `Anthropic API: ${await res.text()}`);
   const data = await res.json();
-  const block = data.content?.find((b) => b.type === 'tool_use');
-  if (!block) throw httpError(502, 'Claude did not return a lesson');
-  return { language, ...block.input };
+  const block = data.content?.find((b) => b.type === 'tool_use' && b.name === 'save_lesson');
+  if (block) return { language, ...block.input };
+
+  // Fallback: Claude answered in text — try to pull a JSON lesson out of it.
+  const text = (data.content || []).filter((b) => b.type === 'text').map((b) => b.text).join('\n');
+  const match = text.match(/\{[\s\S]*\}/);
+  if (match) {
+    try {
+      const parsed = JSON.parse(match[0]);
+      if (Array.isArray(parsed.phrases)) return { language, title: parsed.title || topic, ...parsed };
+    } catch {}
+  }
+  throw httpError(502, `Claude did not return a lesson (stop_reason: ${data.stop_reason})`);
 }
 
 // ---------- ElevenLabs: text -> mp3 (cached on disk) ----------
