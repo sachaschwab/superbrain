@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f8f9;
+  --surface: #ffffff;
+  --surface-2: #f1f4f5;
+  --ink: #15202b;
+  --muted: #5d6b78;
+  --line: #e2e7eb;
+  --accent: #0e7490;
+  --accent-ink: #ffffff;
+  --accent-soft: #e0f2f5;
+  --ok: #047857;
+  --warn: #b45309;
+  --bad: #b91c1c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1418;
+    --surface: #141d22;
+    --surface-2: #1a252b;
+    --ink: #e6edf1;
+    --muted: #93a3ae;
+    --line: #26333b;
+    --accent: #5cc3d6;
+    --accent-ink: #062027;
+    --accent-soft: #15323a;
+    --ok: #5fd3a8;
+    --warn: #f0b45a;
+    --bad: #f28b8b;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+}
+
+html { background: var(--bg); color: var(--ink); color-scheme: light dark; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.ja { font-feature-settings: "palt"; letter-spacing: 0.01em; }
+audio { width: 100%; }
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center rounded-lg border border-line bg-surface px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply inline-flex items-center rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90 disabled:cursor-wait disabled:opacity-60;
+  }
+  .field {
+    @apply w-full rounded-lg border border-line bg-surface px-3 py-1.5 text-sm text-ink focus:border-accent focus:outline-none;
+  }
+}

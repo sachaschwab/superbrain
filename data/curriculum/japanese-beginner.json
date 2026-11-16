@@ -1,0 +1,2969 @@
+{
+  "id": "ja-beginner",
+  "title": "Japanese at Night — Beginner",
+  "targetLanguage": "ja-JP",
+  "explanationLanguage": "en",
+  "version": 1,
+  "lessons": [
+    {
+      "id": "ja-beginner-01",
+      "number": 1,
+      "title": "Greetings & Introductions",
+      "description": "Greet people, say your name, nationality and job, and ask simple yes/no questions.",
+      "topic": "Meeting someone for the first time",
+      "objectives": [
+        "Greet someone politely and introduce yourself",
+        "State your nationality and occupation with は and です",
+        "Ask and answer simple yes/no questions with か"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v01-01",
+          "japanese": "こんにちは",
+          "reading": "こんにちは",
+          "romaji": "konnichiwa",
+          "english": "hello / good afternoon",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v01-02",
+          "japanese": "はじめまして",
+          "reading": "はじめまして",
+          "romaji": "hajimemashite",
+          "english": "nice to meet you (said at a first meeting)",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v01-03",
+          "japanese": "よろしくお願いします",
+          "reading": "よろしくおねがいします",
+          "romaji": "yoroshiku onegaishimasu",
+          "english": "pleased to meet you / I look forward to working with you",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v01-04",
+          "japanese": "私",
+          "reading": "わたし",
+          "romaji": "watashi",
+          "english": "I, me",
+          "partOfSpeech": "pronoun"
+        },
+        {
+          "id": "v01-05",
+          "japanese": "名前",
+          "reading": "なまえ",
+          "romaji": "namae",
+          "english": "name",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-06",
+          "japanese": "学生",
+          "reading": "がくせい",
+          "romaji": "gakusei",
+          "english": "student",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-07",
+          "japanese": "会社員",
+          "reading": "かいしゃいん",
+          "romaji": "kaishain",
+          "english": "company employee",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-08",
+          "japanese": "先生",
+          "reading": "せんせい",
+          "romaji": "sensei",
+          "english": "teacher",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-09",
+          "japanese": "日本",
+          "reading": "にほん",
+          "romaji": "Nihon",
+          "english": "Japan",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-10",
+          "japanese": "〜人",
+          "reading": "〜じん",
+          "romaji": "-jin",
+          "english": "person from … (nationality suffix)",
+          "partOfSpeech": "suffix"
+        },
+        {
+          "id": "v01-11",
+          "japanese": "アメリカ",
+          "reading": "アメリカ",
+          "romaji": "Amerika",
+          "english": "America (USA)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v01-12",
+          "japanese": "はい / いいえ",
+          "reading": "はい / いいえ",
+          "romaji": "hai / iie",
+          "english": "yes / no",
+          "partOfSpeech": "expression"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g01-1",
+          "name": "A は B です",
+          "role": "primary",
+          "explanation": "は marks the topic (what we are talking about); です is the polite copula, roughly 'is/am/are'. Word order is topic – comment – です. は is written with the kana ha but pronounced wa as a particle.",
+          "examples": [
+            "私は学生です。",
+            "私はアメリカ人です。",
+            "田中さんは先生です。"
+          ]
+        },
+        {
+          "id": "g01-2",
+          "name": "か questions and はい / いいえ",
+          "role": "related",
+          "explanation": "Adding か to the end of a polite sentence turns it into a yes/no question; intonation can rise, but か alone already marks the question. Answer with はい、そうです or いいえ、ちがいます.",
+          "examples": [
+            "学生ですか。",
+            "はい、そうです。",
+            "いいえ、会社員です。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [],
+      "reviewGrammarIds": [],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Keep everything in polite style; strangers meeting for the first time would not use casual speech. Do not introduce です negatives yet beyond the fixed ちがいます."
+    },
+    {
+      "id": "ja-beginner-02",
+      "number": 2,
+      "title": "People & Relationships",
+      "description": "Talk about the people around you and connect nouns with の.",
+      "topic": "Family, friends and colleagues",
+      "objectives": [
+        "Name close family members and colleagues",
+        "Express possession and affiliation with の",
+        "Say 'also' with も"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v02-01",
+          "japanese": "家族",
+          "reading": "かぞく",
+          "romaji": "kazoku",
+          "english": "family",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-02",
+          "japanese": "父",
+          "reading": "ちち",
+          "romaji": "chichi",
+          "english": "(my) father",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-03",
+          "japanese": "母",
+          "reading": "はは",
+          "romaji": "haha",
+          "english": "(my) mother",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-04",
+          "japanese": "兄",
+          "reading": "あに",
+          "romaji": "ani",
+          "english": "(my) older brother",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-05",
+          "japanese": "妹",
+          "reading": "いもうと",
+          "romaji": "imōto",
+          "english": "(my) younger sister",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-06",
+          "japanese": "友達",
+          "reading": "ともだち",
+          "romaji": "tomodachi",
+          "english": "friend",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-07",
+          "japanese": "同僚",
+          "reading": "どうりょう",
+          "romaji": "dōryō",
+          "english": "colleague",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-08",
+          "japanese": "会社",
+          "reading": "かいしゃ",
+          "romaji": "kaisha",
+          "english": "company",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v02-09",
+          "japanese": "あの人",
+          "reading": "あのひと",
+          "romaji": "ano hito",
+          "english": "that person (over there)",
+          "partOfSpeech": "noun phrase"
+        },
+        {
+          "id": "v02-10",
+          "japanese": "誰",
+          "reading": "だれ",
+          "romaji": "dare",
+          "english": "who",
+          "partOfSpeech": "question word"
+        },
+        {
+          "id": "v02-11",
+          "japanese": "〜さん",
+          "reading": "〜さん",
+          "romaji": "-san",
+          "english": "Mr./Ms. … (title, never used for yourself)",
+          "partOfSpeech": "suffix"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g02-1",
+          "name": "の: possession and affiliation",
+          "role": "primary",
+          "explanation": "の links two nouns: the first describes or owns the second. 私の友達 = my friend; 会社の同僚 = a colleague from the company. The order is the reverse of English 'of'.",
+          "examples": [
+            "私の母です。",
+            "会社の同僚です。",
+            "あの人は誰ですか。"
+          ]
+        },
+        {
+          "id": "g02-2",
+          "name": "も: also, too",
+          "role": "related",
+          "explanation": "も replaces は (or が) to mean 'also'. It attaches to the noun that is 'also' true.",
+          "examples": [
+            "私も学生です。",
+            "兄も会社員です。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v01-04",
+        "v01-06",
+        "v01-07",
+        "v01-08",
+        "v01-12"
+      ],
+      "reviewGrammarIds": [
+        "g01-1",
+        "g01-2"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "父/母/兄/妹 are humble forms for one's own family. Mention briefly that someone else's family uses お父さん/お母さん, but do not teach the full honorific system. Casual speech between friends may drop です (e.g. 友達。/ 誰？); keep casual lines short and justified by a friendly context."
+    },
+    {
+      "id": "ja-beginner-03",
+      "number": 3,
+      "title": "Numbers & Prices",
+      "description": "Count from 0 to 100, ask prices and point at things with これ・それ・あれ.",
+      "topic": "Asking how much things cost",
+      "objectives": [
+        "Recognise numbers 0–100",
+        "Ask 'how much is this?' and understand the answer",
+        "Distinguish これ / それ / あれ by distance"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v03-01",
+          "japanese": "一",
+          "reading": "いち",
+          "romaji": "ichi",
+          "english": "one",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-02",
+          "japanese": "二",
+          "reading": "に",
+          "romaji": "ni",
+          "english": "two",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-03",
+          "japanese": "三",
+          "reading": "さん",
+          "romaji": "san",
+          "english": "three",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-04",
+          "japanese": "四",
+          "reading": "よん",
+          "romaji": "yon",
+          "english": "four",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-05",
+          "japanese": "五",
+          "reading": "ご",
+          "romaji": "go",
+          "english": "five",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-06",
+          "japanese": "六",
+          "reading": "ろく",
+          "romaji": "roku",
+          "english": "six",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-07",
+          "japanese": "七",
+          "reading": "なな",
+          "romaji": "nana",
+          "english": "seven",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-08",
+          "japanese": "八",
+          "reading": "はち",
+          "romaji": "hachi",
+          "english": "eight",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-09",
+          "japanese": "九",
+          "reading": "きゅう",
+          "romaji": "kyū",
+          "english": "nine",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-10",
+          "japanese": "十",
+          "reading": "じゅう",
+          "romaji": "jū",
+          "english": "ten",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-11",
+          "japanese": "百",
+          "reading": "ひゃく",
+          "romaji": "hyaku",
+          "english": "one hundred",
+          "partOfSpeech": "number"
+        },
+        {
+          "id": "v03-12",
+          "japanese": "円",
+          "reading": "えん",
+          "romaji": "en",
+          "english": "yen",
+          "partOfSpeech": "counter / noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g03-1",
+          "name": "いくらですか",
+          "role": "primary",
+          "explanation": "いくら means 'how much (money)'. Ask with N は いくらですか and answer with number + 円 です. Zero is ゼロ. Tens are built by multiplication then addition: 二十 (に・じゅう) = 20, 二十五 = 25.",
+          "examples": [
+            "これはいくらですか。",
+            "百円です。",
+            "それは三十円です。"
+          ]
+        },
+        {
+          "id": "g03-2",
+          "name": "これ・それ・あれ",
+          "role": "related",
+          "explanation": "これ = this (near me), それ = that (near you), あれ = that over there (far from both). They stand alone as pronouns; どれ asks 'which one'.",
+          "examples": [
+            "これは何ですか。",
+            "あれはいくらですか。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v01-09",
+        "v02-08",
+        "v01-12"
+      ],
+      "reviewGrammarIds": [
+        "g01-1",
+        "g01-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Teach 四 = よん and 七 = なな as the default readings; mention し/しち exist but avoid them. 100 is ひゃく (not いちひゃく). Prices above 100 can appear only as recognisable numbers if needed (e.g. 三百 = さんびゃく is an irregular sound change — avoid unless explained)."
+    },
+    {
+      "id": "ja-beginner-04",
+      "number": 4,
+      "title": "Days, Dates & Time",
+      "description": "Talk about days of the week and times, and ask when something happens.",
+      "topic": "Weekdays and clock times",
+      "objectives": [
+        "Name the days of the week",
+        "Tell the time in hours and minutes",
+        "Use に with specific times and ask いつ / 何時"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v04-01",
+          "japanese": "月曜日",
+          "reading": "げつようび",
+          "romaji": "getsuyōbi",
+          "english": "Monday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-02",
+          "japanese": "火曜日",
+          "reading": "かようび",
+          "romaji": "kayōbi",
+          "english": "Tuesday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-03",
+          "japanese": "水曜日",
+          "reading": "すいようび",
+          "romaji": "suiyōbi",
+          "english": "Wednesday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-04",
+          "japanese": "木曜日",
+          "reading": "もくようび",
+          "romaji": "mokuyōbi",
+          "english": "Thursday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-05",
+          "japanese": "金曜日",
+          "reading": "きんようび",
+          "romaji": "kin'yōbi",
+          "english": "Friday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-06",
+          "japanese": "土曜日",
+          "reading": "どようび",
+          "romaji": "doyōbi",
+          "english": "Saturday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-07",
+          "japanese": "日曜日",
+          "reading": "にちようび",
+          "romaji": "nichiyōbi",
+          "english": "Sunday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-08",
+          "japanese": "今日",
+          "reading": "きょう",
+          "romaji": "kyō",
+          "english": "today",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-09",
+          "japanese": "明日",
+          "reading": "あした",
+          "romaji": "ashita",
+          "english": "tomorrow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-10",
+          "japanese": "今",
+          "reading": "いま",
+          "romaji": "ima",
+          "english": "now",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v04-11",
+          "japanese": "〜時",
+          "reading": "〜じ",
+          "romaji": "-ji",
+          "english": "… o'clock",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v04-12",
+          "japanese": "〜分",
+          "reading": "〜ふん / 〜ぷん",
+          "romaji": "-fun / -pun",
+          "english": "… minutes",
+          "partOfSpeech": "counter"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g04-1",
+          "name": "Time + に",
+          "role": "primary",
+          "explanation": "Specific points in time (clock times, days of the week) take に when they modify a verb: 三時に起きます. With です alone, no に is needed: 会議は三時です. Relative words such as 今日, 明日 and 今 never take に. Verbs come in lesson 7, so here notice the pattern in listening only.",
+          "examples": [
+            "テストは月曜日です。",
+            "パーティーは七時です。",
+            "明日は日曜日です。"
+          ]
+        },
+        {
+          "id": "g04-2",
+          "name": "いつ / 何時",
+          "role": "related",
+          "explanation": "いつ asks 'when' in general; 何時 (なんじ) asks 'what time'. 今、何時ですか = What time is it now?",
+          "examples": [
+            "今、何時ですか。",
+            "九時十分です。",
+            "テストはいつですか。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v03-01",
+        "v03-02",
+        "v03-03",
+        "v03-05",
+        "v03-10"
+      ],
+      "reviewGrammarIds": [
+        "g01-2",
+        "g03-1"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Dates of the month (ついたち, ふつか …) are highly irregular — defer them; this lesson covers weekdays and clock time only. Irregular hours: 四時 = よじ, 七時 = しちじ, 九時 = くじ. Minutes alternate ふん/ぷん (五分 ごふん, 十分 じゅっぷん); teach 五分, 十分, 三十分 (さんじゅっぷん) and 半 (はん, half past) as recognisable forms. Verbs have not been taught yet: use only です sentences."
+    },
+    {
+      "id": "ja-beginner-05",
+      "number": 5,
+      "title": "Objects Around Us",
+      "description": "Name everyday objects, describe their colour and point to specific things with この・その・あの.",
+      "topic": "Everyday things and their colours",
+      "objectives": [
+        "Name ten everyday objects",
+        "Use この・その・あの before a noun",
+        "Ask 何ですか and describe colours"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v05-01",
+          "japanese": "本",
+          "reading": "ほん",
+          "romaji": "hon",
+          "english": "book",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-02",
+          "japanese": "かばん",
+          "reading": "かばん",
+          "romaji": "kaban",
+          "english": "bag",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-03",
+          "japanese": "傘",
+          "reading": "かさ",
+          "romaji": "kasa",
+          "english": "umbrella",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-04",
+          "japanese": "時計",
+          "reading": "とけい",
+          "romaji": "tokei",
+          "english": "watch, clock",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-05",
+          "japanese": "ペン",
+          "reading": "ペン",
+          "romaji": "pen",
+          "english": "pen",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-06",
+          "japanese": "携帯",
+          "reading": "けいたい",
+          "romaji": "keitai",
+          "english": "mobile phone",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-07",
+          "japanese": "鍵",
+          "reading": "かぎ",
+          "romaji": "kagi",
+          "english": "key",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v05-08",
+          "japanese": "何",
+          "reading": "なん / なに",
+          "romaji": "nan / nani",
+          "english": "what",
+          "partOfSpeech": "question word"
+        },
+        {
+          "id": "v05-09",
+          "japanese": "赤い",
+          "reading": "あかい",
+          "romaji": "akai",
+          "english": "red",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v05-10",
+          "japanese": "青い",
+          "reading": "あおい",
+          "romaji": "aoi",
+          "english": "blue",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v05-11",
+          "japanese": "白い",
+          "reading": "しろい",
+          "romaji": "shiroi",
+          "english": "white",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v05-12",
+          "japanese": "黒い",
+          "reading": "くろい",
+          "romaji": "kuroi",
+          "english": "black",
+          "partOfSpeech": "い-adjective"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g05-1",
+          "name": "この・その・あの + noun",
+          "role": "primary",
+          "explanation": "この/その/あの must be followed by a noun (この本 = this book), while これ/それ/あれ stand alone (これ = this one). Same distance logic: near me / near you / far from both.",
+          "examples": [
+            "この本は私のです。",
+            "その傘は誰のですか。",
+            "あのかばんは赤いです。"
+          ]
+        },
+        {
+          "id": "g05-2",
+          "name": "何ですか / noun + です",
+          "role": "related",
+          "explanation": "何ですか asks 'what is it?'. 何 is read なん before です and most counters. Colour words like 赤い can stand before a noun (赤いかばん) or at the end before です (かばんは赤いです).",
+          "examples": [
+            "これは何ですか。",
+            "それは時計です。",
+            "私の携帯は黒いです。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v02-06",
+        "v03-11",
+        "v03-12",
+        "v01-04"
+      ],
+      "reviewGrammarIds": [
+        "g02-1",
+        "g03-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Colours appear here as fixed chunks; the full い-adjective system (negatives, past) comes in lessons 12–13. 誰の (whose) is a natural extension of の from lesson 2."
+    },
+    {
+      "id": "ja-beginner-06",
+      "number": 6,
+      "title": "Places & Directions",
+      "description": "Ask where places are and say what is where with あります and います.",
+      "topic": "Where things and people are",
+      "objectives": [
+        "Ask where something is with どこ",
+        "Use ここ・そこ・あそこ",
+        "Describe location with あります / います and position words"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v06-01",
+          "japanese": "駅",
+          "reading": "えき",
+          "romaji": "eki",
+          "english": "station",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-02",
+          "japanese": "トイレ",
+          "reading": "トイレ",
+          "romaji": "toire",
+          "english": "toilet",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-03",
+          "japanese": "銀行",
+          "reading": "ぎんこう",
+          "romaji": "ginkō",
+          "english": "bank",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-04",
+          "japanese": "コンビニ",
+          "reading": "コンビニ",
+          "romaji": "konbini",
+          "english": "convenience store",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-05",
+          "japanese": "部屋",
+          "reading": "へや",
+          "romaji": "heya",
+          "english": "room",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-06",
+          "japanese": "机",
+          "reading": "つくえ",
+          "romaji": "tsukue",
+          "english": "desk",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-07",
+          "japanese": "上",
+          "reading": "うえ",
+          "romaji": "ue",
+          "english": "on, above",
+          "partOfSpeech": "position noun"
+        },
+        {
+          "id": "v06-08",
+          "japanese": "下",
+          "reading": "した",
+          "romaji": "shita",
+          "english": "under, below",
+          "partOfSpeech": "position noun"
+        },
+        {
+          "id": "v06-09",
+          "japanese": "中",
+          "reading": "なか",
+          "romaji": "naka",
+          "english": "inside",
+          "partOfSpeech": "position noun"
+        },
+        {
+          "id": "v06-10",
+          "japanese": "隣",
+          "reading": "となり",
+          "romaji": "tonari",
+          "english": "next to",
+          "partOfSpeech": "position noun"
+        },
+        {
+          "id": "v06-11",
+          "japanese": "人",
+          "reading": "ひと",
+          "romaji": "hito",
+          "english": "person",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v06-12",
+          "japanese": "猫",
+          "reading": "ねこ",
+          "romaji": "neko",
+          "english": "cat",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g06-1",
+          "name": "ここ・そこ・あそこ / どこ",
+          "role": "primary",
+          "explanation": "Place words matching これ・それ・あれ: ここ = here, そこ = there (near you), あそこ = over there. どこ = where. トイレはどこですか = Where is the toilet?",
+          "examples": [
+            "トイレはどこですか。",
+            "あそこです。",
+            "駅はここです。"
+          ]
+        },
+        {
+          "id": "g06-2",
+          "name": "Place に あります / います",
+          "role": "related",
+          "explanation": "Existence: inanimate things あります, living people and animals います. Place takes に. Position words attach with の: 机の上に = on the desk.",
+          "examples": [
+            "机の上に本があります。",
+            "部屋に猫がいます。",
+            "銀行の隣にコンビニがあります。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v05-01",
+        "v05-03",
+        "v05-07",
+        "v02-06",
+        "v03-02"
+      ],
+      "reviewGrammarIds": [
+        "g03-2",
+        "g05-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "が appears for the first time as the subject marker in existence sentences; explain it only as 'marks what exists' and contrast briefly with は (topic). Casual: friends might say 猫がいる？ — this uses the dictionary form; keep any casual line to a single recognisable exchange, or omit."
+    },
+    {
+      "id": "ja-beginner-07",
+      "number": 7,
+      "title": "Daily Activities",
+      "description": "Describe everyday actions with polite verbs and mark objects with を.",
+      "topic": "Your everyday routine",
+      "objectives": [
+        "Use common verbs in polite present affirmative and negative",
+        "Mark direct objects with を",
+        "Describe a daily routine with times"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v07-01",
+          "japanese": "起きます",
+          "reading": "おきます",
+          "romaji": "okimasu",
+          "english": "get up, wake up",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v07-02",
+          "japanese": "寝ます",
+          "reading": "ねます",
+          "romaji": "nemasu",
+          "english": "go to bed, sleep",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v07-03",
+          "japanese": "食べます",
+          "reading": "たべます",
+          "romaji": "tabemasu",
+          "english": "eat",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v07-04",
+          "japanese": "飲みます",
+          "reading": "のみます",
+          "romaji": "nomimasu",
+          "english": "drink",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v07-05",
+          "japanese": "見ます",
+          "reading": "みます",
+          "romaji": "mimasu",
+          "english": "see, watch",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v07-06",
+          "japanese": "読みます",
+          "reading": "よみます",
+          "romaji": "yomimasu",
+          "english": "read",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v07-07",
+          "japanese": "聞きます",
+          "reading": "ききます",
+          "romaji": "kikimasu",
+          "english": "listen, hear",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v07-08",
+          "japanese": "します",
+          "reading": "します",
+          "romaji": "shimasu",
+          "english": "do",
+          "partOfSpeech": "verb (irregular)"
+        },
+        {
+          "id": "v07-09",
+          "japanese": "仕事",
+          "reading": "しごと",
+          "romaji": "shigoto",
+          "english": "work, job",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v07-10",
+          "japanese": "朝ご飯",
+          "reading": "あさごはん",
+          "romaji": "asagohan",
+          "english": "breakfast",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v07-11",
+          "japanese": "毎日",
+          "reading": "まいにち",
+          "romaji": "mainichi",
+          "english": "every day",
+          "partOfSpeech": "noun / adverb"
+        },
+        {
+          "id": "v07-12",
+          "japanese": "テレビ",
+          "reading": "テレビ",
+          "romaji": "terebi",
+          "english": "television",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g07-1",
+          "name": "〜ます / 〜ません",
+          "role": "primary",
+          "explanation": "Polite non-past verbs end in ます (affirmative) and ません (negative). Non-past covers habits and the future: 毎日起きます = I get up every day. Only the ます form is taught here; dictionary forms come later.",
+          "examples": [
+            "毎日六時に起きます。",
+            "朝ご飯を食べません。",
+            "十一時に寝ます。"
+          ]
+        },
+        {
+          "id": "g07-2",
+          "name": "を: the direct object",
+          "role": "related",
+          "explanation": "を marks what the action is done to. Japanese verbs come last: object を verb. を is pronounced o.",
+          "examples": [
+            "テレビを見ます。",
+            "本を読みます。",
+            "仕事をします。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v04-08",
+        "v04-09",
+        "v04-11",
+        "v05-01",
+        "v03-06"
+      ],
+      "reviewGrammarIds": [
+        "g04-1",
+        "g04-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Now that verbs exist, time + に can be practised properly (七時に起きます). Do not introduce the past tense (lesson 11) or the て-form (lesson 15)."
+    },
+    {
+      "id": "ja-beginner-08",
+      "number": 8,
+      "title": "Food & Drinks",
+      "description": "Talk about food and drinks, say what you like, and ask for things politely.",
+      "topic": "What you like to eat and drink",
+      "objectives": [
+        "Name common foods and drinks",
+        "Say what you like and dislike with が好きです",
+        "Ask for something with をください"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v08-01",
+          "japanese": "ご飯",
+          "reading": "ごはん",
+          "romaji": "gohan",
+          "english": "cooked rice, meal",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-02",
+          "japanese": "パン",
+          "reading": "パン",
+          "romaji": "pan",
+          "english": "bread",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-03",
+          "japanese": "魚",
+          "reading": "さかな",
+          "romaji": "sakana",
+          "english": "fish",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-04",
+          "japanese": "肉",
+          "reading": "にく",
+          "romaji": "niku",
+          "english": "meat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-05",
+          "japanese": "野菜",
+          "reading": "やさい",
+          "romaji": "yasai",
+          "english": "vegetables",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-06",
+          "japanese": "果物",
+          "reading": "くだもの",
+          "romaji": "kudamono",
+          "english": "fruit",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-07",
+          "japanese": "水",
+          "reading": "みず",
+          "romaji": "mizu",
+          "english": "water",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-08",
+          "japanese": "お茶",
+          "reading": "おちゃ",
+          "romaji": "ocha",
+          "english": "(green) tea",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-09",
+          "japanese": "コーヒー",
+          "reading": "コーヒー",
+          "romaji": "kōhī",
+          "english": "coffee",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-10",
+          "japanese": "ビール",
+          "reading": "ビール",
+          "romaji": "bīru",
+          "english": "beer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-11",
+          "japanese": "寿司",
+          "reading": "すし",
+          "romaji": "sushi",
+          "english": "sushi",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v08-12",
+          "japanese": "好き",
+          "reading": "すき",
+          "romaji": "suki",
+          "english": "liked, fond of",
+          "partOfSpeech": "な-adjective"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g08-1",
+          "name": "〜が好きです",
+          "role": "primary",
+          "explanation": "The thing liked is marked with が, not を: 魚が好きです = I like fish. Negative: 好きじゃないです (casual: 好きじゃない). あまり好きじゃないです softens it.",
+          "examples": [
+            "私はコーヒーが好きです。",
+            "肉はあまり好きじゃないです。",
+            "何が好きですか。"
+          ]
+        },
+        {
+          "id": "g08-2",
+          "name": "〜をください",
+          "role": "related",
+          "explanation": "N をください = Please give me N. Polite and common in shops; お願いします is slightly softer.",
+          "examples": [
+            "水をください。",
+            "お茶をお願いします。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v07-03",
+        "v07-04",
+        "v07-10",
+        "v07-11",
+        "v05-08"
+      ],
+      "reviewGrammarIds": [
+        "g07-1",
+        "g07-2"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "好き is a な-adjective, but present it as a fixed pattern here; な-adjectives are systematised in lesson 12. A casual exchange between friends (魚、好き？ / うん、好き！) is natural."
+    },
+    {
+      "id": "ja-beginner-09",
+      "number": 9,
+      "title": "At a Restaurant",
+      "description": "Order food in a restaurant, count items and people, and ask for the bill.",
+      "topic": "Ordering food and drinks",
+      "objectives": [
+        "Count things with the general counter 〜つ (1–5)",
+        "Count people with 一人 / 二人 / 〜人",
+        "Order and ask for the bill politely"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v09-01",
+          "japanese": "すみません",
+          "reading": "すみません",
+          "romaji": "sumimasen",
+          "english": "excuse me (to get attention)",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v09-02",
+          "japanese": "いらっしゃいませ",
+          "reading": "いらっしゃいませ",
+          "romaji": "irasshaimase",
+          "english": "welcome (staff greeting; recognise only)",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v09-03",
+          "japanese": "メニュー",
+          "reading": "メニュー",
+          "romaji": "menyū",
+          "english": "menu",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v09-04",
+          "japanese": "一つ",
+          "reading": "ひとつ",
+          "romaji": "hitotsu",
+          "english": "one (thing)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-05",
+          "japanese": "二つ",
+          "reading": "ふたつ",
+          "romaji": "futatsu",
+          "english": "two (things)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-06",
+          "japanese": "三つ",
+          "reading": "みっつ",
+          "romaji": "mittsu",
+          "english": "three (things)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-07",
+          "japanese": "四つ",
+          "reading": "よっつ",
+          "romaji": "yottsu",
+          "english": "four (things)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-08",
+          "japanese": "五つ",
+          "reading": "いつつ",
+          "romaji": "itsutsu",
+          "english": "five (things)",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-09",
+          "japanese": "いくつ",
+          "reading": "いくつ",
+          "romaji": "ikutsu",
+          "english": "how many (things)",
+          "partOfSpeech": "question word"
+        },
+        {
+          "id": "v09-10",
+          "japanese": "一人",
+          "reading": "ひとり",
+          "romaji": "hitori",
+          "english": "one person",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-11",
+          "japanese": "二人",
+          "reading": "ふたり",
+          "romaji": "futari",
+          "english": "two people",
+          "partOfSpeech": "counter"
+        },
+        {
+          "id": "v09-12",
+          "japanese": "お会計",
+          "reading": "おかいけい",
+          "romaji": "okaikei",
+          "english": "the bill, check",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g09-1",
+          "name": "Counters: 〜つ and 〜人",
+          "role": "primary",
+          "explanation": "Japanese counts with counters. The native counter 〜つ counts most things (1–10); 一人 and 二人 are irregular, from three people on use number + 人 (三人 = さんにん). Word order: noun を number verb — コーヒーを二つください.",
+          "examples": [
+            "コーヒーを二つください。",
+            "二人です。",
+            "いくつですか。"
+          ]
+        },
+        {
+          "id": "g09-2",
+          "name": "〜をお願いします",
+          "role": "related",
+          "explanation": "N をお願いします is a soft, polite way to order or request. お会計をお願いします = The bill, please.",
+          "examples": [
+            "お水をお願いします。",
+            "お会計をお願いします。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v08-07",
+        "v08-08",
+        "v08-09",
+        "v08-11",
+        "v03-12"
+      ],
+      "reviewGrammarIds": [
+        "g03-1",
+        "g08-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Counter scaffolding: only two counter systems are taught (〜つ for things, 〜人 for people). Do not introduce 〜本, 〜枚, 〜杯 etc. Staff speech such as 何名様ですか is honorific: present at most once, immediately followed by a plain explanation; the learner's own lines stay in simple polite style."
+    },
+    {
+      "id": "ja-beginner-10",
+      "number": 10,
+      "title": "Going Somewhere",
+      "description": "Say where you are going, coming and returning, and how you travel.",
+      "topic": "Transport and destinations",
+      "objectives": [
+        "Use 行きます / 来ます / 帰ります with destinations",
+        "Mark the destination with へ or に",
+        "Mark the means of transport with で"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v10-01",
+          "japanese": "行きます",
+          "reading": "いきます",
+          "romaji": "ikimasu",
+          "english": "go",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v10-02",
+          "japanese": "来ます",
+          "reading": "きます",
+          "romaji": "kimasu",
+          "english": "come",
+          "partOfSpeech": "verb (irregular)"
+        },
+        {
+          "id": "v10-03",
+          "japanese": "帰ります",
+          "reading": "かえります",
+          "romaji": "kaerimasu",
+          "english": "go home, return",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v10-04",
+          "japanese": "電車",
+          "reading": "でんしゃ",
+          "romaji": "densha",
+          "english": "train",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-05",
+          "japanese": "バス",
+          "reading": "バス",
+          "romaji": "basu",
+          "english": "bus",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-06",
+          "japanese": "車",
+          "reading": "くるま",
+          "romaji": "kuruma",
+          "english": "car",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-07",
+          "japanese": "飛行機",
+          "reading": "ひこうき",
+          "romaji": "hikōki",
+          "english": "aeroplane",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-08",
+          "japanese": "歩いて",
+          "reading": "あるいて",
+          "romaji": "aruite",
+          "english": "on foot",
+          "partOfSpeech": "adverbial"
+        },
+        {
+          "id": "v10-09",
+          "japanese": "学校",
+          "reading": "がっこう",
+          "romaji": "gakkō",
+          "english": "school",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-10",
+          "japanese": "家",
+          "reading": "うち",
+          "romaji": "uchi",
+          "english": "home, my house",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-11",
+          "japanese": "空港",
+          "reading": "くうこう",
+          "romaji": "kūkō",
+          "english": "airport",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v10-12",
+          "japanese": "東京",
+          "reading": "とうきょう",
+          "romaji": "Tōkyō",
+          "english": "Tokyo",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g10-1",
+          "name": "Destination へ / に",
+          "role": "primary",
+          "explanation": "Motion verbs take the destination with へ (direction, pronounced e) or に (arrival point). Both are natural with 行きます・来ます・帰ります.",
+          "examples": [
+            "明日、東京へ行きます。",
+            "七時に家に帰ります。",
+            "駅に行きます。"
+          ]
+        },
+        {
+          "id": "g10-2",
+          "name": "で: means of transport",
+          "role": "related",
+          "explanation": "で marks the means: 電車で行きます = go by train. 'On foot' is 歩いて without で.",
+          "examples": [
+            "バスで学校へ行きます。",
+            "飛行機で東京に来ます。",
+            "歩いて駅へ行きます。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v06-01",
+        "v04-07",
+        "v04-09",
+        "v07-11",
+        "v06-04"
+      ],
+      "reviewGrammarIds": [
+        "g04-1",
+        "g07-1"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "歩いて is technically a て-form; present it as a fixed adverb now and point back to it in lesson 15. Contrast で (means) with に/へ (destination) using pairs that change one element."
+    },
+    {
+      "id": "ja-beginner-11",
+      "number": 11,
+      "title": "Past Experiences",
+      "description": "Talk about what you did yesterday, last week and last year.",
+      "topic": "What you did",
+      "objectives": [
+        "Use polite past affirmative and negative verbs",
+        "Use past time words",
+        "Say you did nothing with 何も〜ませんでした"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v11-01",
+          "japanese": "昨日",
+          "reading": "きのう",
+          "romaji": "kinō",
+          "english": "yesterday",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-02",
+          "japanese": "先週",
+          "reading": "せんしゅう",
+          "romaji": "senshū",
+          "english": "last week",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-03",
+          "japanese": "去年",
+          "reading": "きょねん",
+          "romaji": "kyonen",
+          "english": "last year",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-04",
+          "japanese": "週末",
+          "reading": "しゅうまつ",
+          "romaji": "shūmatsu",
+          "english": "weekend",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-05",
+          "japanese": "映画",
+          "reading": "えいが",
+          "romaji": "eiga",
+          "english": "film, movie",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-06",
+          "japanese": "旅行",
+          "reading": "りょこう",
+          "romaji": "ryokō",
+          "english": "trip, travel",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-07",
+          "japanese": "会います",
+          "reading": "あいます",
+          "romaji": "aimasu",
+          "english": "meet (someone に)",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v11-08",
+          "japanese": "買います",
+          "reading": "かいます",
+          "romaji": "kaimasu",
+          "english": "buy",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v11-09",
+          "japanese": "書きます",
+          "reading": "かきます",
+          "romaji": "kakimasu",
+          "english": "write",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v11-10",
+          "japanese": "メール",
+          "reading": "メール",
+          "romaji": "mēru",
+          "english": "email",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v11-11",
+          "japanese": "何も",
+          "reading": "なにも",
+          "romaji": "nanimo",
+          "english": "nothing (with a negative verb)",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g11-1",
+          "name": "〜ました / 〜ませんでした",
+          "role": "primary",
+          "explanation": "Polite past: replace ます with ました (did) and ません with ませんでした (did not). Works for every verb learned so far.",
+          "examples": [
+            "昨日、映画を見ました。",
+            "先週、友達に会いました。",
+            "昨日は学校へ行きませんでした。"
+          ]
+        },
+        {
+          "id": "g11-2",
+          "name": "何も + negative",
+          "role": "related",
+          "explanation": "何も with a negative verb means 'nothing'. 何も買いませんでした = I bought nothing.",
+          "examples": [
+            "何も食べませんでした。",
+            "昨日は何もしませんでした。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v02-06",
+        "v07-05",
+        "v10-01",
+        "v10-12",
+        "v08-03"
+      ],
+      "reviewGrammarIds": [
+        "g07-1",
+        "g07-2",
+        "g10-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "会います takes に for the person (友達に会います) — flag this as a common learner error. Casual past (見た, 行った) requires the た-form and is NOT taught yet: casual lines, if any, should avoid verb past forms (e.g. 映画？ / うん、面白かった would be too early — avoid)."
+    },
+    {
+      "id": "ja-beginner-12",
+      "number": 12,
+      "title": "Describing Things",
+      "description": "Describe people, places and things with い- and な-adjectives.",
+      "topic": "Adjectives",
+      "objectives": [
+        "Use い-adjectives before nouns and at the end of sentences",
+        "Use な-adjectives with な before nouns",
+        "Form polite negatives of both adjective types"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v12-01",
+          "japanese": "大きい",
+          "reading": "おおきい",
+          "romaji": "ōkii",
+          "english": "big",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-02",
+          "japanese": "小さい",
+          "reading": "ちいさい",
+          "romaji": "chiisai",
+          "english": "small",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-03",
+          "japanese": "高い",
+          "reading": "たかい",
+          "romaji": "takai",
+          "english": "expensive; tall, high",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-04",
+          "japanese": "安い",
+          "reading": "やすい",
+          "romaji": "yasui",
+          "english": "cheap",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-05",
+          "japanese": "新しい",
+          "reading": "あたらしい",
+          "romaji": "atarashii",
+          "english": "new",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-06",
+          "japanese": "古い",
+          "reading": "ふるい",
+          "romaji": "furui",
+          "english": "old (things)",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-07",
+          "japanese": "面白い",
+          "reading": "おもしろい",
+          "romaji": "omoshiroi",
+          "english": "interesting, funny",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v12-08",
+          "japanese": "きれい",
+          "reading": "きれい",
+          "romaji": "kirei",
+          "english": "pretty; clean",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v12-09",
+          "japanese": "静か",
+          "reading": "しずか",
+          "romaji": "shizuka",
+          "english": "quiet",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v12-10",
+          "japanese": "元気",
+          "reading": "げんき",
+          "romaji": "genki",
+          "english": "healthy, energetic",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v12-11",
+          "japanese": "有名",
+          "reading": "ゆうめい",
+          "romaji": "yūmei",
+          "english": "famous",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v12-12",
+          "japanese": "とても",
+          "reading": "とても",
+          "romaji": "totemo",
+          "english": "very",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g12-1",
+          "name": "い-adjectives",
+          "role": "primary",
+          "explanation": "い-adjectives end in い and go straight before nouns (高い本) or before です (この本は高いです). Negative: replace い with くないです (高くないです). Irregular: いい → よくないです.",
+          "examples": [
+            "この時計は高いです。",
+            "新しいかばんです。",
+            "あの映画は面白くないです。"
+          ]
+        },
+        {
+          "id": "g12-2",
+          "name": "な-adjectives",
+          "role": "related",
+          "explanation": "な-adjectives take な before a noun (静かな部屋) and です at the end (部屋は静かです). Negative: じゃないです. Warning: きれい ends in い but is a な-adjective.",
+          "examples": [
+            "東京は有名な町です。",
+            "この部屋は静かじゃないです。",
+            "とてもきれいですね。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v05-01",
+        "v05-02",
+        "v06-05",
+        "v10-12",
+        "v11-05"
+      ],
+      "reviewGrammarIds": [
+        "g05-1",
+        "g08-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Present adjective negatives as polite 〜くないです / 〜じゃないです (the 〜くありません form can be mentioned as more formal). Casual: drop です (高い！ / 静かだね). Past of adjectives comes in lesson 13."
+    },
+    {
+      "id": "ja-beginner-13",
+      "number": 13,
+      "title": "Weather & Seasons",
+      "description": "Make small talk about the weather and seasons, now and in the past.",
+      "topic": "Talking about the weather",
+      "objectives": [
+        "Ask and answer どうですか questions",
+        "Describe weather with adjectives",
+        "Use the past of adjectives (〜かったです / 〜でした)"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v13-01",
+          "japanese": "天気",
+          "reading": "てんき",
+          "romaji": "tenki",
+          "english": "weather",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-02",
+          "japanese": "晴れ",
+          "reading": "はれ",
+          "romaji": "hare",
+          "english": "sunny weather",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-03",
+          "japanese": "雨",
+          "reading": "あめ",
+          "romaji": "ame",
+          "english": "rain",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-04",
+          "japanese": "雪",
+          "reading": "ゆき",
+          "romaji": "yuki",
+          "english": "snow",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-05",
+          "japanese": "暑い",
+          "reading": "あつい",
+          "romaji": "atsui",
+          "english": "hot (weather)",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v13-06",
+          "japanese": "寒い",
+          "reading": "さむい",
+          "romaji": "samui",
+          "english": "cold (weather)",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v13-07",
+          "japanese": "暖かい",
+          "reading": "あたたかい",
+          "romaji": "atatakai",
+          "english": "warm",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v13-08",
+          "japanese": "涼しい",
+          "reading": "すずしい",
+          "romaji": "suzushii",
+          "english": "cool, refreshing",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v13-09",
+          "japanese": "春",
+          "reading": "はる",
+          "romaji": "haru",
+          "english": "spring",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-10",
+          "japanese": "夏",
+          "reading": "なつ",
+          "romaji": "natsu",
+          "english": "summer",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-11",
+          "japanese": "秋",
+          "reading": "あき",
+          "romaji": "aki",
+          "english": "autumn",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v13-12",
+          "japanese": "冬",
+          "reading": "ふゆ",
+          "romaji": "fuyu",
+          "english": "winter",
+          "partOfSpeech": "noun"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g13-1",
+          "name": "どうですか + adjective predicates",
+          "role": "primary",
+          "explanation": "〜はどうですか asks 'how is …?' and invites an adjective answer: 天気はどうですか → 寒いです. Noun weather words take です: 雨です.",
+          "examples": [
+            "今日の天気はどうですか。",
+            "晴れです。",
+            "東京の夏はとても暑いです。"
+          ]
+        },
+        {
+          "id": "g13-2",
+          "name": "Past of adjectives",
+          "role": "related",
+          "explanation": "い-adjectives: 〜い → 〜かったです (寒かったです). な-adjectives and nouns: 〜でした (静かでした, 雨でした). Irregular: いい → よかったです.",
+          "examples": [
+            "昨日は寒かったです。",
+            "週末は雨でした。",
+            "去年の冬は暖かかったです。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v12-10",
+        "v12-12",
+        "v11-01",
+        "v11-04",
+        "v04-08"
+      ],
+      "reviewGrammarIds": [
+        "g12-1",
+        "g12-2",
+        "g11-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Weather small talk often uses ね (暑いですね) — introduce ね as a rapport particle ('isn't it'). Casual: 寒いね！/ 寒かったね is natural between friends. Do not confuse pitch accent with sentence intonation: rising intonation on どう？ is intonation."
+    },
+    {
+      "id": "ja-beginner-14",
+      "number": 14,
+      "title": "Shopping",
+      "description": "Shop for clothes, say what you want and compare two items.",
+      "topic": "Clothes, sizes and choices",
+      "objectives": [
+        "Say what you want with 〜がほしいです",
+        "Compare two things with より and のほうが",
+        "Ask about size and colour"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v14-01",
+          "japanese": "服",
+          "reading": "ふく",
+          "romaji": "fuku",
+          "english": "clothes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-02",
+          "japanese": "シャツ",
+          "reading": "シャツ",
+          "romaji": "shatsu",
+          "english": "shirt",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-03",
+          "japanese": "靴",
+          "reading": "くつ",
+          "romaji": "kutsu",
+          "english": "shoes",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-04",
+          "japanese": "帽子",
+          "reading": "ぼうし",
+          "romaji": "bōshi",
+          "english": "hat, cap",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-05",
+          "japanese": "サイズ",
+          "reading": "サイズ",
+          "romaji": "saizu",
+          "english": "size",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-06",
+          "japanese": "色",
+          "reading": "いろ",
+          "romaji": "iro",
+          "english": "colour",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-07",
+          "japanese": "店",
+          "reading": "みせ",
+          "romaji": "mise",
+          "english": "shop",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v14-08",
+          "japanese": "ほしい",
+          "reading": "ほしい",
+          "romaji": "hoshii",
+          "english": "want (a thing)",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v14-09",
+          "japanese": "もっと",
+          "reading": "もっと",
+          "romaji": "motto",
+          "english": "more",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v14-10",
+          "japanese": "ちょっと",
+          "reading": "ちょっと",
+          "romaji": "chotto",
+          "english": "a little; (softens a refusal)",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v14-11",
+          "japanese": "どちら",
+          "reading": "どちら",
+          "romaji": "dochira",
+          "english": "which (of two)",
+          "partOfSpeech": "question word"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g14-1",
+          "name": "〜がほしいです",
+          "role": "primary",
+          "explanation": "ほしい is an い-adjective meaning 'want (a thing)'. The thing wanted takes が: 新しい靴がほしいです. Used for the speaker's own wishes; for others it is avoided.",
+          "examples": [
+            "新しいシャツがほしいです。",
+            "もっと小さいサイズがほしいです。",
+            "何がほしいですか。"
+          ]
+        },
+        {
+          "id": "g14-2",
+          "name": "A は B より 〜です / どちらが",
+          "role": "related",
+          "explanation": "A は B より adjective です = A is more … than B. Ask with A と B と どちらが 〜ですか and answer with 〜のほうが 〜です.",
+          "examples": [
+            "このシャツはあのシャツより安いです。",
+            "黒と白とどちらがいいですか。",
+            "白いほうがいいです。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v12-03",
+        "v12-04",
+        "v12-05",
+        "v05-09",
+        "v05-11"
+      ],
+      "reviewGrammarIds": [
+        "g12-1",
+        "g08-2",
+        "g13-1"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Keep shop staff speech in simple polite style (no お客様 / ございます chains). と for 'and' between nouns appears in the comparison question; flag it briefly."
+    },
+    {
+      "id": "ja-beginner-15",
+      "number": 15,
+      "title": "Work & Office",
+      "description": "Make polite requests at work and learn how the て-form is built.",
+      "topic": "Requests at work",
+      "objectives": [
+        "Recognise how the て-form is formed from the ます-stem",
+        "Make polite requests with 〜てください",
+        "Understand common office vocabulary"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v15-01",
+          "japanese": "会議",
+          "reading": "かいぎ",
+          "romaji": "kaigi",
+          "english": "meeting",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-02",
+          "japanese": "資料",
+          "reading": "しりょう",
+          "romaji": "shiryō",
+          "english": "materials, documents",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-03",
+          "japanese": "予定",
+          "reading": "よてい",
+          "romaji": "yotei",
+          "english": "plan, schedule",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-04",
+          "japanese": "電話",
+          "reading": "でんわ",
+          "romaji": "denwa",
+          "english": "telephone (call)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-05",
+          "japanese": "上司",
+          "reading": "じょうし",
+          "romaji": "jōshi",
+          "english": "boss, superior",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-06",
+          "japanese": "コピー",
+          "reading": "コピー",
+          "romaji": "kopī",
+          "english": "copy",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v15-07",
+          "japanese": "送ります",
+          "reading": "おくります",
+          "romaji": "okurimasu",
+          "english": "send",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v15-08",
+          "japanese": "見せます",
+          "reading": "みせます",
+          "romaji": "misemasu",
+          "english": "show",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v15-09",
+          "japanese": "待ちます",
+          "reading": "まちます",
+          "romaji": "machimasu",
+          "english": "wait",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v15-10",
+          "japanese": "手伝います",
+          "reading": "てつだいます",
+          "romaji": "tetsudaimasu",
+          "english": "help",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v15-11",
+          "japanese": "少し",
+          "reading": "すこし",
+          "romaji": "sukoshi",
+          "english": "a little",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v15-12",
+          "japanese": "後で",
+          "reading": "あとで",
+          "romaji": "ato de",
+          "english": "later",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g15-1",
+          "name": "The て-form (from the ます-stem)",
+          "role": "primary",
+          "explanation": "Remove ます and look at the last sound. Group 2: just add て (食べ→食べて, 見せ→見せて). Irregular: し→して, 来→きて. Group 1: い/ち/り→って (待ち→待って, 送り→送って, 手伝い→手伝って); み/び/に→んで (読み→読んで, 飲み→飲んで); き→いて (書き→書いて, 聞き→聞いて); ぎ→いで; し→して. Exception: 行き→行って.",
+          "examples": [
+            "見せます → 見せて",
+            "待ちます → 待って",
+            "読みます → 読んで",
+            "書きます → 書いて"
+          ]
+        },
+        {
+          "id": "g15-2",
+          "name": "〜てください",
+          "role": "related",
+          "explanation": "て-form + ください = please do …. Add ちょっと or 少し to soften. Recall 歩いて from lesson 10 — it was a て-form all along.",
+          "examples": [
+            "資料を見せてください。",
+            "少し待ってください。",
+            "後でメールを送ってください。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v11-10",
+        "v04-11",
+        "v07-08",
+        "v12-12",
+        "v02-07"
+      ],
+      "reviewGrammarIds": [
+        "g07-1",
+        "g11-1"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "SCAFFOLDING: the て-form is the hardest morphology so far. Step 5 should build it in three passes (group 2 + irregular → group 1 っ/ん → group 1 い/いで + 行って), with 2–3 examples each, not one rushed table. Pattern variation should keep the verb fixed and change the object, then keep the object and change the verb. Lessons 16–19 reuse the て-form."
+    },
+    {
+      "id": "ja-beginner-16",
+      "number": 16,
+      "title": "Plans & Invitations",
+      "description": "Invite someone, accept or politely decline, and suggest doing things together.",
+      "topic": "Inviting and making plans",
+      "objectives": [
+        "Invite with 〜ませんか",
+        "Suggest with 〜ましょう / 〜ましょうか",
+        "Decline politely with ちょっと…"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v16-01",
+          "japanese": "暇",
+          "reading": "ひま",
+          "romaji": "hima",
+          "english": "free (time)",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v16-02",
+          "japanese": "一緒に",
+          "reading": "いっしょに",
+          "romaji": "issho ni",
+          "english": "together",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v16-03",
+          "japanese": "今晩",
+          "reading": "こんばん",
+          "romaji": "konban",
+          "english": "this evening, tonight",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-04",
+          "japanese": "来週",
+          "reading": "らいしゅう",
+          "romaji": "raishū",
+          "english": "next week",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-05",
+          "japanese": "時間",
+          "reading": "じかん",
+          "romaji": "jikan",
+          "english": "time",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-06",
+          "japanese": "コンサート",
+          "reading": "コンサート",
+          "romaji": "konsāto",
+          "english": "concert",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-07",
+          "japanese": "散歩",
+          "reading": "さんぽ",
+          "romaji": "sanpo",
+          "english": "a walk, stroll",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-08",
+          "japanese": "レストラン",
+          "reading": "レストラン",
+          "romaji": "resutoran",
+          "english": "restaurant",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-09",
+          "japanese": "約束",
+          "reading": "やくそく",
+          "romaji": "yakusoku",
+          "english": "appointment, promise",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v16-10",
+          "japanese": "いいですね",
+          "reading": "いいですね",
+          "romaji": "ii desu ne",
+          "english": "sounds good",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v16-11",
+          "japanese": "残念ですが",
+          "reading": "ざんねんですが",
+          "romaji": "zannen desu ga",
+          "english": "unfortunately …",
+          "partOfSpeech": "expression"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g16-1",
+          "name": "〜ませんか (invitation)",
+          "role": "primary",
+          "explanation": "A negative question used as a gentle invitation: 一緒に行きませんか = Won't you come with me? It leaves room to refuse, so it is more polite than ましょう.",
+          "examples": [
+            "今晩、一緒に映画を見ませんか。",
+            "土曜日に散歩しませんか。",
+            "いいですね。行きましょう。"
+          ]
+        },
+        {
+          "id": "g16-2",
+          "name": "〜ましょう / 〜ましょうか",
+          "role": "related",
+          "explanation": "〜ましょう = let's …; 〜ましょうか = shall we …? / shall I …?. Polite refusal: ちょっと… or 残念ですが、〜は約束があります.",
+          "examples": [
+            "何時に会いましょうか。",
+            "七時に駅で会いましょう。",
+            "残念ですが、来週はちょっと…。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v11-04",
+        "v11-05",
+        "v12-02",
+        "v15-03",
+        "v04-06"
+      ],
+      "reviewGrammarIds": [
+        "g10-1",
+        "g15-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Casual invitations (行かない？ / 行こう) need the ない-form and volitional form, not yet taught: keep this lesson polite. で for the place of an action (駅で会いましょう) appears; explain briefly and contrast with に for existence."
+    },
+    {
+      "id": "ja-beginner-17",
+      "number": 17,
+      "title": "Abilities & Preferences",
+      "description": "Talk about what you can do, your hobbies and how well you do things; meet the dictionary form.",
+      "topic": "Skills and hobbies",
+      "objectives": [
+        "Say what you can do with できます and ことができます",
+        "Form the dictionary form from the ます form",
+        "Talk about skill with 上手 / 下手"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v17-01",
+          "japanese": "趣味",
+          "reading": "しゅみ",
+          "romaji": "shumi",
+          "english": "hobby",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-02",
+          "japanese": "英語",
+          "reading": "えいご",
+          "romaji": "eigo",
+          "english": "English (language)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-03",
+          "japanese": "日本語",
+          "reading": "にほんご",
+          "romaji": "nihongo",
+          "english": "Japanese (language)",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-04",
+          "japanese": "料理",
+          "reading": "りょうり",
+          "romaji": "ryōri",
+          "english": "cooking, cuisine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-05",
+          "japanese": "歌",
+          "reading": "うた",
+          "romaji": "uta",
+          "english": "song",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-06",
+          "japanese": "歌います",
+          "reading": "うたいます",
+          "romaji": "utaimasu",
+          "english": "sing",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v17-07",
+          "japanese": "弾きます",
+          "reading": "ひきます",
+          "romaji": "hikimasu",
+          "english": "play (a string or keyboard instrument)",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v17-08",
+          "japanese": "ピアノ",
+          "reading": "ピアノ",
+          "romaji": "piano",
+          "english": "piano",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v17-09",
+          "japanese": "泳ぎます",
+          "reading": "およぎます",
+          "romaji": "oyogimasu",
+          "english": "swim",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v17-10",
+          "japanese": "上手",
+          "reading": "じょうず",
+          "romaji": "jōzu",
+          "english": "skilful, good at",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v17-11",
+          "japanese": "下手",
+          "reading": "へた",
+          "romaji": "heta",
+          "english": "unskilful, bad at",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v17-12",
+          "japanese": "全然",
+          "reading": "ぜんぜん",
+          "romaji": "zenzen",
+          "english": "(not) at all (with a negative)",
+          "partOfSpeech": "adverb"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g17-1",
+          "name": "Noun が できます / Dictionary form + ことができます",
+          "role": "primary",
+          "explanation": "できます = can do. With a noun: 日本語ができます. With a verb: dictionary form + ことができます. Dictionary form from ます-stem: group 1 i→u (泳ぎ→泳ぐ, 弾き→弾く, 歌い→歌う), group 2 add る (食べ→食べる), irregular します→する, 来ます→来る.",
+          "examples": [
+            "英語ができます。",
+            "ピアノを弾くことができます。",
+            "全然泳ぐことができません。"
+          ]
+        },
+        {
+          "id": "g17-2",
+          "name": "上手 / 下手 + が",
+          "role": "related",
+          "explanation": "Skill: person は thing が 上手です. Saying 上手です about yourself sounds boastful; the modest reply to a compliment is いいえ、まだまだです.",
+          "examples": [
+            "料理が上手ですね。",
+            "いいえ、まだまだです。",
+            "私は歌が下手です。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v12-07",
+        "v15-11",
+        "v08-12",
+        "v07-07",
+        "v16-01"
+      ],
+      "reviewGrammarIds": [
+        "g08-1",
+        "g15-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "This is the first formal introduction of the dictionary form: make the ます ↔ dictionary pairs explicit and contrast them, using verbs from lessons 7, 10, 11 and 15. Casual: friends use the dictionary form directly (泳げる？ is the potential form — do NOT use; prefer 泳ぐ？ only as 'do you swim?')."
+    },
+    {
+      "id": "ja-beginner-18",
+      "number": 18,
+      "title": "Health & Wellbeing",
+      "description": "Describe how you feel and simple symptoms, and meet the casual negative ない-form.",
+      "topic": "How you feel",
+      "objectives": [
+        "Name body parts and describe pain with 〜が痛いです",
+        "Understand simple symptoms and advice",
+        "Form and use the casual negative ない-form"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v18-01",
+          "japanese": "体",
+          "reading": "からだ",
+          "romaji": "karada",
+          "english": "body",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-02",
+          "japanese": "頭",
+          "reading": "あたま",
+          "romaji": "atama",
+          "english": "head",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-03",
+          "japanese": "お腹",
+          "reading": "おなか",
+          "romaji": "onaka",
+          "english": "stomach, belly",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-04",
+          "japanese": "喉",
+          "reading": "のど",
+          "romaji": "nodo",
+          "english": "throat",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-05",
+          "japanese": "熱",
+          "reading": "ねつ",
+          "romaji": "netsu",
+          "english": "fever",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-06",
+          "japanese": "風邪",
+          "reading": "かぜ",
+          "romaji": "kaze",
+          "english": "a cold",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-07",
+          "japanese": "薬",
+          "reading": "くすり",
+          "romaji": "kusuri",
+          "english": "medicine",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-08",
+          "japanese": "痛い",
+          "reading": "いたい",
+          "romaji": "itai",
+          "english": "painful, sore",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v18-09",
+          "japanese": "疲れました",
+          "reading": "つかれました",
+          "romaji": "tsukaremashita",
+          "english": "(I'm) tired",
+          "partOfSpeech": "verb (past)"
+        },
+        {
+          "id": "v18-10",
+          "japanese": "大丈夫",
+          "reading": "だいじょうぶ",
+          "romaji": "daijōbu",
+          "english": "all right, OK",
+          "partOfSpeech": "な-adjective"
+        },
+        {
+          "id": "v18-11",
+          "japanese": "病院",
+          "reading": "びょういん",
+          "romaji": "byōin",
+          "english": "hospital, clinic",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v18-12",
+          "japanese": "休みます",
+          "reading": "やすみます",
+          "romaji": "yasumimasu",
+          "english": "rest; take time off",
+          "partOfSpeech": "verb (group 1)"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g18-1",
+          "name": "Body part が 痛いです",
+          "role": "primary",
+          "explanation": "Pain: body part + が 痛いです = My … hurts. 熱があります = I have a fever; 風邪をひきました = I caught a cold (fixed phrase). Ask: 大丈夫ですか.",
+          "examples": [
+            "頭が痛いです。",
+            "熱があります。",
+            "大丈夫ですか。"
+          ]
+        },
+        {
+          "id": "g18-2",
+          "name": "The ない-form (casual negative)",
+          "role": "related",
+          "explanation": "Casual negative of verbs. Group 1: change the ending to the あ-row + ない (休む→休まない, 飲む→飲まない; う→わない: 歌う→歌わない). Group 2: drop る + ない (食べる→食べない). Irregular: する→しない, 来る→こない.",
+          "examples": [
+            "今日は仕事に行かない。",
+            "何も食べない。",
+            "大丈夫？ — うん、大丈夫。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v17-12",
+        "v08-07",
+        "v07-02",
+        "v15-11",
+        "v16-05"
+      ],
+      "reviewGrammarIds": [
+        "g12-1",
+        "g17-1",
+        "g15-2"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Present the ない-form after a recap of dictionary forms from lesson 17. Casual exchanges belong to friends or family checking on each other; the doctor/clinic exchange stays polite. Keep medical content non-diagnostic and everyday."
+    },
+    {
+      "id": "ja-beginner-19",
+      "number": 19,
+      "title": "Travel & Accommodation",
+      "description": "Check in at a hotel, ask for permission and understand what is not allowed.",
+      "topic": "Hotels and rules",
+      "objectives": [
+        "Ask for permission with 〜てもいいですか",
+        "Understand prohibitions with 〜てはいけません",
+        "Handle a simple hotel check-in and a small problem"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v19-01",
+          "japanese": "ホテル",
+          "reading": "ホテル",
+          "romaji": "hoteru",
+          "english": "hotel",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-02",
+          "japanese": "予約",
+          "reading": "よやく",
+          "romaji": "yoyaku",
+          "english": "reservation",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-03",
+          "japanese": "チェックイン",
+          "reading": "チェックイン",
+          "romaji": "chekkuin",
+          "english": "check-in",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-04",
+          "japanese": "チェックアウト",
+          "reading": "チェックアウト",
+          "romaji": "chekkuauto",
+          "english": "check-out",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-05",
+          "japanese": "パスポート",
+          "reading": "パスポート",
+          "romaji": "pasupōto",
+          "english": "passport",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-06",
+          "japanese": "荷物",
+          "reading": "にもつ",
+          "romaji": "nimotsu",
+          "english": "luggage",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-07",
+          "japanese": "預けます",
+          "reading": "あずけます",
+          "romaji": "azukemasu",
+          "english": "leave (in someone's care)",
+          "partOfSpeech": "verb (group 2)"
+        },
+        {
+          "id": "v19-08",
+          "japanese": "写真",
+          "reading": "しゃしん",
+          "romaji": "shashin",
+          "english": "photograph",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-09",
+          "japanese": "撮ります",
+          "reading": "とります",
+          "romaji": "torimasu",
+          "english": "take (a photo)",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v19-10",
+          "japanese": "たばこ",
+          "reading": "たばこ",
+          "romaji": "tabako",
+          "english": "cigarette",
+          "partOfSpeech": "noun"
+        },
+        {
+          "id": "v19-11",
+          "japanese": "吸います",
+          "reading": "すいます",
+          "romaji": "suimasu",
+          "english": "smoke; breathe in",
+          "partOfSpeech": "verb (group 1)"
+        },
+        {
+          "id": "v19-12",
+          "japanese": "困ります",
+          "reading": "こまります",
+          "romaji": "komarimasu",
+          "english": "be in trouble, have a problem",
+          "partOfSpeech": "verb (group 1)"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g19-1",
+          "name": "〜てもいいですか (permission)",
+          "role": "primary",
+          "explanation": "て-form + もいいですか = May I …? Answer はい、どうぞ or すみません、ちょっと….",
+          "examples": [
+            "荷物を預けてもいいですか。",
+            "ここで写真を撮ってもいいですか。",
+            "はい、どうぞ。"
+          ]
+        },
+        {
+          "id": "g19-2",
+          "name": "〜てはいけません (prohibition)",
+          "role": "related",
+          "explanation": "て-form + はいけません = must not …. Strong; common on signs and rules. Polite refusal to a request uses ちょっと… instead.",
+          "examples": [
+            "ここでたばこを吸ってはいけません。",
+            "部屋で料理をしてはいけません。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v15-08",
+        "v15-09",
+        "v10-11",
+        "v06-05",
+        "v05-07"
+      ],
+      "reviewGrammarIds": [
+        "g15-1",
+        "g15-2",
+        "g16-2"
+      ],
+      "targetRegisters": [
+        "polite"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "Re-scaffold the て-form with a 60-second recap before teaching もいい / はいけない. Casual ～ちゃだめ is recognition-only at most; prefer to omit."
+    },
+    {
+      "id": "ja-beginner-20",
+      "number": 20,
+      "title": "Integrated Conversations",
+      "description": "Review the main themes in longer natural conversations and link sentences smoothly.",
+      "topic": "Bringing it all together",
+      "objectives": [
+        "Follow a longer conversation mixing earlier topics",
+        "Link ideas with でも・それから・だから",
+        "Choose polite or casual register appropriately"
+      ],
+      "vocabularyTargets": [
+        {
+          "id": "v20-01",
+          "japanese": "でも",
+          "reading": "でも",
+          "romaji": "demo",
+          "english": "but, however",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "id": "v20-02",
+          "japanese": "それから",
+          "reading": "それから",
+          "romaji": "sorekara",
+          "english": "and then, after that",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "id": "v20-03",
+          "japanese": "だから",
+          "reading": "だから",
+          "romaji": "dakara",
+          "english": "so, therefore",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "id": "v20-04",
+          "japanese": "じゃあ",
+          "reading": "じゃあ",
+          "romaji": "jā",
+          "english": "well then",
+          "partOfSpeech": "conjunction"
+        },
+        {
+          "id": "v20-05",
+          "japanese": "そうですね",
+          "reading": "そうですね",
+          "romaji": "sō desu ne",
+          "english": "let me see; that's right",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v20-06",
+          "japanese": "本当に",
+          "reading": "ほんとうに",
+          "romaji": "hontō ni",
+          "english": "really",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v20-07",
+          "japanese": "また",
+          "reading": "また",
+          "romaji": "mata",
+          "english": "again",
+          "partOfSpeech": "adverb"
+        },
+        {
+          "id": "v20-08",
+          "japanese": "楽しい",
+          "reading": "たのしい",
+          "romaji": "tanoshii",
+          "english": "fun, enjoyable",
+          "partOfSpeech": "い-adjective"
+        },
+        {
+          "id": "v20-09",
+          "japanese": "ありがとうございました",
+          "reading": "ありがとうございました",
+          "romaji": "arigatō gozaimashita",
+          "english": "thank you (for what you did)",
+          "partOfSpeech": "expression"
+        },
+        {
+          "id": "v20-10",
+          "japanese": "お疲れ様でした",
+          "reading": "おつかれさまでした",
+          "romaji": "otsukaresama deshita",
+          "english": "thank you for your hard work",
+          "partOfSpeech": "expression"
+        }
+      ],
+      "grammarTargets": [
+        {
+          "id": "g20-1",
+          "name": "Linking sentences: でも・それから・だから",
+          "role": "primary",
+          "explanation": "Start a new sentence with でも (contrast), それから (sequence) or だから (reason → result) to connect ideas without new grammar.",
+          "examples": [
+            "昨日は雨でした。でも、楽しかったです。",
+            "映画を見ました。それから、レストランへ行きました。",
+            "熱があります。だから、今日は休みます。"
+          ]
+        },
+        {
+          "id": "g20-2",
+          "name": "Choosing register",
+          "role": "related",
+          "explanation": "Polite (です/ます) with strangers, colleagues and staff; casual with friends and family. Characters should switch only when the relationship justifies it.",
+          "examples": [
+            "じゃあ、また来週。",
+            "本当にありがとうございました。",
+            "お疲れ様でした。"
+          ]
+        }
+      ],
+      "reviewVocabularyIds": [
+        "v01-03",
+        "v08-12",
+        "v09-12",
+        "v11-04",
+        "v13-01",
+        "v14-08",
+        "v16-02",
+        "v17-01",
+        "v18-10",
+        "v19-02"
+      ],
+      "reviewGrammarIds": [
+        "g01-1",
+        "g07-1",
+        "g11-1",
+        "g12-1",
+        "g13-2",
+        "g15-2",
+        "g16-1",
+        "g18-1"
+      ],
+      "targetRegisters": [
+        "polite",
+        "casual"
+      ],
+      "estimatedMinutes": 18,
+      "teachingNotes": "This lesson has few new words on purpose. Build Step 1 as a longer dialogue (up to 7 turns) between two colleagues who become friendlier; Step 11 can be a casual phone call between friends planning the weekend. No new grammar beyond the linking words."
+    }
+  ]
+}

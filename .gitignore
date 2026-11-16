@@ -1,6 +1,14 @@
 node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
 .env
-data/audio/*
-!data/audio/.gitkeep
-.DS_Store
+.env.local
+data/*.db
+data/*.db-*
+data/generations/
+data/tts-cache/
+test-data/
 instructions.txt
+.DS_Store
+*.nosync
