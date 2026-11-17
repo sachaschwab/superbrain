@@ -4,9 +4,9 @@
   "private": true,
   "description": "Japanese at Night — AI-generated bedtime Japanese audio lessons.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 4000",
     "test": "vitest run",
     "smoke": "tsx scripts/smoke.ts",
     "validate:curriculum": "tsx scripts/validate-curriculum.ts",

@@ -16,7 +16,7 @@ Requires **Node.js 20.9+** (22 LTS recommended). FFmpeg is bundled via `ffmpeg-s
 ```bash
 npm install
 cp .env.example .env        # add ANTHROPIC_API_KEY and ELEVENLABS_API_KEY
-npm run dev                 # → http://localhost:3000
+npm run dev                 # → http://localhost:4000 (falls back to 4001 if busy)
 ```
 
 The SQLite database (`data/superbrain.db`) is created and migrated automatically on first

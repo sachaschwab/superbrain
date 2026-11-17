@@ -3,7 +3,7 @@ export {};
 //   LLM_PROVIDER=mock TTS_PROVIDER=mock npm run dev   (in one terminal)
 //   npm run smoke                                      (in another)
 // Note: settings saved in the UI override the env defaults; set both providers to "mock" there if needed.
-const BASE = process.env.BASE_URL || 'http://localhost:3000';
+const BASE = process.env.BASE_URL || 'http://localhost:4000';
 
 async function json(path: string, init?: RequestInit) {
   const res = await fetch(BASE + path, init);
