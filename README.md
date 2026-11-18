@@ -35,6 +35,14 @@ it exists to demonstrate and test the pipeline end to end.
 1. **Pick voices.** The default voice IDs are stock English ElevenLabs voices. For natural Japanese,
    choose native Japanese voices in the ElevenLabs Voice Library and paste their IDs into
    Settings → Voices (female, male; narrator stays English).
+   Use **▶ Test** next to each voice to hear a short Japanese sample before generating.
+   - **Model:** `eleven_v4` gives the most native Japanese accent, even for non-Japanese voices,
+     but has no speed setting, so the app slows segments afterwards with FFmpeg (pitch preserved).
+     `eleven_multilingual_v2` keeps native speed control but can carry the voice's own accent;
+     with it, the app sends neighbouring Japanese text as context. `eleven_flash_v2_5` is cheaper
+     and also accepts the `language_code` setting that forces Japanese pronunciation.
+   - Single Japanese words in vocabulary drills are sent to the voice as their kana reading (私 → わたし),
+     so the model doesn't guess the reading or slip into an English accent; the transcript keeps the kanji.
 2. **Enter prices** (Settings → Cost controls) if you want cost estimates and a confirmation
    threshold. No prices are assumed.
 3. Generate **Lesson 1**, read the script ("Inspect script" / transcript), and listen to it in bed
@@ -112,7 +120,7 @@ scripts/smoke.ts                          API end-to-end smoke test
 ## Tests
 
 ```bash
-npm test                    # 27 unit + integration tests (mock LLM/TTS, real FFmpeg)
+npm test                    # 35 unit + integration tests (mock LLM/TTS, real FFmpeg)
 npm run validate:curriculum
 # end-to-end against a running server in mock mode:
 LLM_PROVIDER=mock TTS_PROVIDER=mock npm run dev

@@ -48,6 +48,36 @@ export function SettingsForm({ initial, keys }: { initial: Settings; keys: { ant
     </label>
   );
 
+  const [previewing, setPreviewing] = useState<string | null>(null);
+  async function preview(path: Path, language: 'ja-JP' | 'en') {
+    const voiceId = (get(s, path) as string) || s.voices.female;
+    setPreviewing(path);
+    setStatus(null);
+    try {
+      const res = await fetch('/api/tts/preview', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ voiceId, language, model: s.tts.model, provider: s.tts.provider }),
+      });
+      if (!res.ok) throw new Error((await res.json()).error);
+      const url = URL.createObjectURL(await res.blob());
+      const audio = new Audio(url);
+      audio.onended = () => setPreviewing(null);
+      await audio.play();
+    } catch (err) {
+      setStatus({ ok: false, text: `Preview failed: ${(err as Error).message}` });
+      setPreviewing(null);
+    }
+  }
+  const voice = (path: Path, language: 'ja-JP' | 'en', placeholder?: string) => (
+    <div className="flex gap-2">
+      {text(path, placeholder)}
+      <button type="button" className="btn shrink-0" disabled={!!previewing} onClick={() => preview(path, language)}>
+        {previewing === path ? 'Playing…' : '▶ Test'}
+      </button>
+    </div>
+  );
+
   async function save() {
     setSaving(true);
     setStatus(null);
@@ -89,14 +119,22 @@ export function SettingsForm({ initial, keys }: { initial: Settings; keys: { ant
 
       <Group title="Voices & speech">
         <Row label="TTS provider">{select('tts.provider', ['elevenlabs', 'mock'])}</Row>
-        <Row label="TTS model">{text('tts.model')}</Row>
+        <Row label="TTS model" hint="eleven_v4 has the best Japanese accent but no speed setting (speed is applied afterwards)">
+          <input className="field font-mono" list="tts-models" value={s.tts.model} onChange={(e) => setS(set(s, 'tts.model', e.target.value))} />
+          <datalist id="tts-models">
+            {['eleven_v4', 'eleven_multilingual_v2', 'eleven_v4_turbo', 'eleven_v3', 'eleven_flash_v2_5', 'eleven_turbo_v2_5'].map((m) => <option key={m} value={m} />)}
+          </datalist>
+        </Row>
         {s.tts.provider === 'elevenlabs' && !keys.elevenlabs && <Warn>ELEVENLABS_API_KEY is not set in .env</Warn>}
         <Row label="Speech speed" hint="0.7–1.2, applied on top of each segment's rate">{num('speechSpeed', { step: 0.05, min: 0.7, max: 1.2 })}</Row>
-        <Row label="Female voice ID" hint="Japanese dialogue">{text('voices.female')}</Row>
-        <Row label="Male voice ID" hint="Japanese dialogue">{text('voices.male')}</Row>
-        <Row label="Narrator voice ID" hint="English explanations">{text('voices.narrator')}</Row>
-        <Row label="Narrator Japanese voice ID" hint="Japanese examples inside explanations; empty = female voice">{text('voices.narratorJapanese', 'same as female')}</Row>
-        <p className="text-xs text-muted">Find voice IDs in your ElevenLabs Voice Library. Native Japanese voices sound far better for the dialogue than the default English voices.</p>
+        <Row label="Female voice ID" hint="Japanese dialogue">{voice('voices.female', 'ja-JP')}</Row>
+        <Row label="Male voice ID" hint="Japanese dialogue">{voice('voices.male', 'ja-JP')}</Row>
+        <Row label="Narrator voice ID" hint="English explanations">{voice('voices.narrator', 'en')}</Row>
+        <Row label="Narrator Japanese voice ID" hint="Japanese examples inside explanations; empty = female voice">{voice('voices.narratorJapanese', 'ja-JP', 'same as female')}</Row>
+        <p className="text-xs text-muted">
+          Find voice IDs in the ElevenLabs Voice Library (filter: Japanese) and add them to My Voices. Native Japanese voices sound far better
+          than the default English ones. ▶ Test plays a short sample with the model above (a few dozen characters; repeated tests are cached).
+        </p>
       </Group>
 
       <Group title="Script generation">

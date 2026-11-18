@@ -7,6 +7,7 @@ import type { CostEstimate } from '@/lib/cost';
 import { StatusBadge, isActive } from '@/components/StatusBadge';
 import { TranscriptView } from '@/components/TranscriptView';
 import { ScriptView } from '@/components/ScriptView';
+import { AudioPlayer } from '@/components/AudioPlayer';
 
 type Gen = NonNullable<ReturnType<typeof getGenerationView>>;
 type Props = {
@@ -128,7 +129,7 @@ export function LessonClient({ lessonId, initialGenerations, fullEstimate, fullE
             </div>
             <span className="text-xs text-muted">{selected.tts}</span>
           </div>
-          <audio key={selected.id} controls preload="metadata" src={`/api/generations/${selected.id}/audio`} />
+          <AudioPlayer key={selected.id} src={`/api/generations/${selected.id}/audio`} knownDuration={selected.durationSeconds} />
           <div className="flex flex-wrap gap-2">
             <a href={`/api/generations/${selected.id}/audio?download=1`} className="btn">Download MP3</a>
             <button className="btn" onClick={() => setPanel(panel === 'transcript' ? 'none' : 'transcript')}>

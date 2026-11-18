@@ -54,6 +54,12 @@ export function buildMockScript(ctx: LessonContext, settings: Settings): LessonS
     }
   };
 
+  /** English meaning(s) of a word: one segment per alternative meaning, the last one carries the pause. */
+  const gloss = (step: number, english: string, pause: number) => {
+    const parts = english.split(/\s*[,/;]\s*/).map((p) => p.trim()).filter(Boolean);
+    parts.forEach((p, i) => explain(step, p.charAt(0).toUpperCase() + p.slice(1) + '.', i === parts.length - 1 ? pause : 600));
+  };
+
   const examples = lesson.grammarTargets.flatMap((g) => g.examples).filter((e) => !/[→—]/.test(e));
   const vocabLines = lesson.vocabularyTargets.map((v) => `${first(v.japanese)}。`);
   const dialogue = [...examples, ...vocabLines].slice(0, Math.max(settings.dialogueTurnsMin, Math.min(6, settings.dialogueTurnsMax)));
@@ -65,12 +71,12 @@ export function buildMockScript(ctx: LessonContext, settings: Settings): LessonS
 
   for (const v of lesson.vocabularyTargets) {
     add(3, 'female', 'ja-JP', first(v.japanese), 'slow', 800, v.english);
-    explain(3, v.english, 600);
+    gloss(3, v.english, 600);
     add(3, 'female', 'ja-JP', first(v.japanese), 'slow', 1200, v.english);
   }
   add(4, 'narrator', 'en', 'Now think of the Japanese silently before you hear it.', 'gentle', 1000);
   for (const v of lesson.vocabularyTargets) {
-    explain(4, v.english, 2500);
+    gloss(4, v.english, 2500);
     add(4, 'male', 'ja-JP', first(v.japanese), 'slow', 500, v.english);
     add(4, 'male', 'ja-JP', first(v.japanese), 'natural', 1500, v.english);
   }

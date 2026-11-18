@@ -16,12 +16,15 @@ export function createTtsProvider(settings: Settings): TtsProvider {
   return new ElevenLabsProvider(settings.tts.model);
 }
 
-/** Voice delivery per speech rate. Speed range for ElevenLabs is 0.7–1.2. */
+/**
+ * Voice delivery per speech rate. "natural" sits slightly under 1.0: isolated TTS turns at full
+ * speed sound hurried to learners. Step 9 ("medium") is ~90% of that, as the spec asks.
+ */
 const DELIVERY: Record<SpeechRate, { speed: number; stability: number }> = {
   slow: { speed: 0.8, stability: 0.6 },
-  medium: { speed: 0.92, stability: 0.55 },
-  natural: { speed: 1.0, stability: 0.5 },
-  gentle: { speed: 0.88, stability: 0.7 },
+  medium: { speed: 0.87, stability: 0.55 },
+  natural: { speed: 0.95, stability: 0.5 },
+  gentle: { speed: 0.85, stability: 0.7 },
 };
 
 export function voiceFor(seg: Pick<AudioSegment, 'speaker' | 'language'>, settings: Settings): string {
@@ -32,15 +35,54 @@ export function voiceFor(seg: Pick<AudioSegment, 'speaker' | 'language'>, settin
   return seg.language === 'ja-JP' ? v.narratorJapanese || v.female : v.narrator;
 }
 
-export function buildTtsRequest(seg: AudioSegment, settings: Settings): TtsRequest {
+const KANA_ONLY = /^[\u3040-\u30ffー・、。！？\s]+$/;
+const strip = (s: string) => s.replace(/[\s、。！？!?「」…・〜]/g, '');
+
+/**
+ * Text actually sent to the voice. Single Japanese words heard on their own (vocabulary drills)
+ * are sent as their kana reading: kanji like 私 or 日本 have several readings, and a lone word
+ * gives the model too little context to sound Japanese. The transcript keeps the kanji.
+ */
+export function speechText(seg: AudioSegment): string {
+  if (seg.language !== 'ja-JP') return seg.text.replace(/\s*\/\s*/g, ' or ');
+  const reading = seg.transcript.reading.trim();
+  const core = strip(seg.text);
+  // Single words only: ≤4 characters, containing kanji, and no は/へ that could be particles (read wa/e).
+  if (core.length <= 4 && /[\u4e00-\u9fff]/.test(core) && !/[はへ]/.test(core) && reading && KANA_ONLY.test(reading)) {
+    return /[。！？?!]$/.test(reading) ? reading : `${reading}。`;
+  }
+  return seg.text;
+}
+
+/** Fallback context for a Japanese segment with no Japanese neighbour (helps models without language_code). */
+const JA_CONTEXT = '日本語の言葉です。';
+
+export function buildTtsRequest(seg: AudioSegment, settings: Settings, neighbours: { prev?: AudioSegment; next?: AudioSegment } = {}): TtsRequest {
   const d = DELIVERY[seg.speechRate];
   const speed = Math.min(1.2, Math.max(0.7, +(d.speed * settings.speechSpeed).toFixed(3)));
-  return { text: seg.text, voiceId: voiceFor(seg, settings), language: seg.language, speechRate: seg.speechRate, speed, stability: d.stability };
+  const sameLang = (n?: AudioSegment) => (n && n.language === seg.language && n.stepNumber === seg.stepNumber ? speechText(n) : undefined);
+  const previousText = sameLang(neighbours.prev) ?? (seg.language === 'ja-JP' ? JA_CONTEXT : undefined);
+  const nextText = sameLang(neighbours.next);
+  return {
+    text: speechText(seg),
+    voiceId: voiceFor(seg, settings),
+    language: seg.language,
+    speechRate: seg.speechRate,
+    speed,
+    stability: d.stability,
+    ...(previousText ? { previousText } : {}),
+    ...(nextText ? { nextText } : {}),
+  };
+}
+
+/** Requests for a whole script, each with its neighbours as context. */
+export function buildTtsRequests(segs: AudioSegment[], settings: Settings): TtsRequest[] {
+  return segs.map((s, i) => buildTtsRequest(s, settings, { prev: segs[i - 1], next: segs[i + 1] }));
 }
 
 export function cacheKey(provider: TtsProvider, req: TtsRequest) {
   return createHash('sha256')
-    .update(JSON.stringify([provider.name, provider.model, req.voiceId, req.speed, req.stability, req.text]))
+    .update(JSON.stringify([provider.name, provider.model, req.voiceId, req.speed, req.stability, req.language, req.text, req.previousText ?? '', req.nextText ?? '']))
     .digest('hex')
     .slice(0, 32);
 }

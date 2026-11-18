@@ -29,6 +29,6 @@ export class MockTtsProvider implements TtsProvider {
 }
 
 // speed passed in already includes the rate factor; undo it because estimateSpeechSeconds re-applies it
-const RATES = { slow: 0.8, medium: 0.92, natural: 1, gentle: 0.88 } as const;
+const RATES = { slow: 0.8, medium: 0.87, natural: 0.95, gentle: 0.85 } as const;
 const rateFactor = (r: TtsRequest) => RATES[r.speechRate];
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);

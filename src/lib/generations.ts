@@ -6,7 +6,7 @@ import { getLesson, loadCurriculum } from './curriculum';
 import { estimateAudioOnly, estimateFullGeneration, exceedsLimit, type CostEstimate } from './cost';
 import { activeGenerationFor, enqueueJob, requeueGeneration } from './jobs/worker';
 import { LessonScriptSchema } from './script/schema';
-import { buildTtsRequest, createTtsProvider, isCached } from './tts';
+import { buildTtsRequests, createTtsProvider, isCached } from './tts';
 import type { Settings } from './config';
 
 export class HttpError extends Error {
@@ -29,7 +29,7 @@ export async function estimateFor(lessonId: string, req: GenerateRequest, settin
     return estimateAudioOnly(settings, script.segments.reduce((n, s) => n + s.text.length, 0));
   }
   let uncached = 0;
-  for (const s of script.segments) if (!(await isCached(tts, buildTtsRequest(s, settings)))) uncached += s.text.length;
+  for (const req of buildTtsRequests(script.segments, settings)) if (!(await isCached(tts, req))) uncached += req.text.length;
   return estimateAudioOnly(settings, uncached);
 }
 

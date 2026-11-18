@@ -38,3 +38,20 @@ export async function probeDuration(file: string): Promise<number> {
   const m = all.at(-1) ?? out.match(/Duration: (\d+):(\d+):([\d.]+)/);
   return m ? Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]) : 0;
 }
+
+/** Time-stretch an MP3 without changing pitch (FFmpeg atempo; 0.5–2.0). */
+export async function changeTempo(mp3: Buffer, tempo: number): Promise<Buffer> {
+  const { mkdtemp, writeFile, readFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const path = await import('node:path');
+  const dir = await mkdtemp(path.join(tmpdir(), 'tempo-'));
+  try {
+    const input = path.join(dir, 'in.mp3');
+    const output = path.join(dir, 'out.mp3');
+    await writeFile(input, mp3);
+    await runFfmpeg(['-i', input, '-filter:a', `atempo=${Math.min(2, Math.max(0.5, tempo)).toFixed(3)}`, '-c:a', 'libmp3lame', '-b:a', '128k', output]);
+    return await readFile(output);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+}

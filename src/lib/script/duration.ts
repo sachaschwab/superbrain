@@ -1,6 +1,6 @@
 import type { AudioSegment, SpeechRate } from './schema';
 
-export const RATE_FACTOR: Record<SpeechRate, number> = { slow: 0.8, medium: 0.92, natural: 1, gentle: 0.88 };
+export const RATE_FACTOR: Record<SpeechRate, number> = { slow: 0.8, medium: 0.87, natural: 0.95, gentle: 0.85 };
 
 const KANA = /[぀-ヿ]/g;
 const KANJI = /[一-鿿㐀-䶿]/g;

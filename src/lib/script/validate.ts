@@ -17,6 +17,10 @@ const JAPANESE = /[぀-ヿ一-鿿]/;
 const DIRECTION = /[\[\]<>{}*#_]|\((?:pause|silence|laugh|sigh|beat)[^)]*\)|（[^）]*(?:間|ポーズ)[^）]*）|\bpause\b|\bsilence\b/i;
 
 const DIALOGUE_STEPS = new Set([1, 9, 10, 11]);
+// "I, me." / "I/me" / "yes, or no" — very short alternatives that TTS merges into one word.
+const GLOSS_LIST = /^[A-Za-z']{1,4}(?:\s*(?:,|\/)\s*(?:or\s+)?[A-Za-z']{1,4})+[.!]?$/i;
+const KANA_READING = /^[\u3040-\u30ffー・、。！？\s]+$/;
+const sentenceCount = (t: string) => t.split(/[。！？!?]/).filter((x) => x.trim()).length;
 const NARRATOR_STEPS = new Set([2, 5]);
 
 /** Normalise Japanese for comparisons: drop punctuation, whitespace and speaker-neutral marks. */
@@ -78,14 +82,21 @@ export function validateScript(raw: unknown, ctx: LessonContext, settings: Setti
       errors.push({ code: 'narrator-speaker', message: `${s.id}: English explanation in step ${s.stepNumber} must be spoken by the narrator`, ...where });
     if (s.language === 'en' && s.speaker !== 'narrator')
       errors.push({ code: 'en-speaker', message: `${s.id}: English is spoken only by the narrator`, ...where });
+    if (s.language === 'en' && GLOSS_LIST.test(s.text.trim()))
+      errors.push({ code: 'gloss-list', message: `${s.id}: "${s.text}" — short English meanings joined by a comma or slash run together in speech; put each meaning in its own segment`, ...where });
+    if (s.language === 'ja-JP' && normJa(s.text).length <= 6 && s.transcript.reading && !KANA_READING.test(s.transcript.reading))
+      warnings.push({ code: 'reading-not-kana', message: `${s.id}: reading "${s.transcript.reading}" should be kana — short words are pronounced from it`, ...where });
+    if (DIALOGUE_STEPS.has(s.stepNumber) && sentenceCount(s.text) > 2)
+      warnings.push({ code: 'long-turn', message: `${s.id}: ${sentenceCount(s.text)} sentences in one dialogue segment — split so it doesn't sound hurried`, ...where });
     if (s.language === 'ja-JP' && !s.transcript.translation && s.stepNumber !== 12)
       warnings.push({ code: 'missing-translation', message: `${s.id}: Japanese segment has no transcript translation`, ...where });
   }
 
   // Dialogue turn count
   const step1 = stepSegments(segs, 1);
-  if (step1.length && (step1.length < settings.dialogueTurnsMin || step1.length > settings.dialogueTurnsMax + 2))
-    warnings.push({ code: 'dialogue-turns', message: `Step 1 has ${step1.length} turns (target ${settings.dialogueTurnsMin}–${settings.dialogueTurnsMax})`, step: 1 });
+  const turns = step1.filter((x, i) => i === 0 || x.speaker !== step1[i - 1].speaker).length;
+  if (step1.length && (turns < settings.dialogueTurnsMin || turns > settings.dialogueTurnsMax + 2))
+    warnings.push({ code: 'dialogue-turns', message: `Step 1 has ${turns} turns (target ${settings.dialogueTurnsMin}–${settings.dialogueTurnsMax})`, step: 1 });
   if (step1.length && (!step1.some((s) => s.speaker === 'female') || !step1.some((s) => s.speaker === 'male')))
     errors.push({ code: 'dialogue-two-speakers', message: 'Step 1 needs both the female and the male speaker', step: 1 });
 

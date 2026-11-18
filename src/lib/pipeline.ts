@@ -7,7 +7,7 @@ import type { GenerationStatus } from './db/schema';
 import { SettingsSchema, type Settings } from './config';
 import { buildLessonContext } from './curriculum';
 import { createLlmProvider, type LlmProvider } from './llm';
-import { createTtsProvider, buildTtsRequest, synthesizeCached, type TtsProvider } from './tts';
+import { createTtsProvider, buildTtsRequests, synthesizeCached, type TtsProvider } from './tts';
 import { generateValidatedScript, ScriptValidationError } from './script/generate';
 import { LessonScriptSchema, type LessonScript } from './script/schema';
 import { buildTranscript, transcriptToMarkdown } from './script/transcript';
@@ -85,6 +85,7 @@ export async function runGeneration(generationId: string, update: PhaseUpdate, d
   const tts = (deps.tts ?? createTtsProvider)(settings);
   setGen({ ttsProvider: tts.name, ttsModel: tts.model });
   const segs = script.segments;
+  const requests = buildTtsRequests(segs, settings);
   const files: string[] = new Array(segs.length);
   let done = 0;
   let characters = 0;
@@ -96,7 +97,7 @@ export async function runGeneration(generationId: string, update: PhaseUpdate, d
       while (next < segs.length && failures.length === 0) {
         const i = next++;
         try {
-          const r = await synthesizeCached(tts, buildTtsRequest(segs[i], settings), (_e, attempt) =>
+          const r = await synthesizeCached(tts, requests[i], (_e, attempt) =>
             update('speech_synthesis', 0.3 + 0.5 * (done / segs.length), `Retrying segment ${segs[i].id} (attempt ${attempt + 1})…`)
           );
           files[i] = r.file;
