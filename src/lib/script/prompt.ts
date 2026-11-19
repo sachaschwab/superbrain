@@ -91,7 +91,7 @@ Target vocabulary (respect these; you may add a few supporting words only if ess
 ${lesson.vocabularyTargets.map((v) => `- ${v.id}: ${v.japanese}（${v.reading}, ${v.romaji}）= ${v.english} [${v.partOfSpeech}]`).join('\n')}
 
 Grammar targets:
-${lesson.grammarTargets.map((g) => `- ${g.id} (${g.role}): ${g.name}\n  ${g.explanation}\n  Examples: ${g.examples.join(' / ')}`).join('\n')}
+${lesson.grammarTargets.map((g) => `- ${g.id} (${g.role}): ${g.name}\n  ${g.explanation}\n  Examples: ${g.examples.map((e) => `${e.japanese} (${e.english})`).join(' / ')}`).join('\n')}
 
 ${settings.includePreviousLessonReview && ctx.reviewVocabulary.length ? `Review material to weave in naturally (reuse these in dialogue, variations and anticipation):
 ${ctx.reviewVocabulary.map((v) => `- ${v.id}: ${v.japanese}（${v.reading}）= ${v.english}`).join('\n')}

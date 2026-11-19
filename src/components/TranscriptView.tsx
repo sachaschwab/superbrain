@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import type { Transcript } from '@/lib/script/transcript';
+import { normJa } from '@/lib/card-key';
+import { PlayButton } from './PlayButton';
+import { FlashcardToggle } from './flashcards/FlashcardsProvider';
 
-export function TranscriptView({ generationId }: { generationId: string }) {
+type Vocab = { id: string; japanese: string; reading: string; romaji: string; english: string };
+
+export function TranscriptView({ generationId, vocab = [] }: { generationId: string; vocab?: Vocab[] }) {
   const [t, setT] = useState<Transcript | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showRomaji, setShowRomaji] = useState(true);
@@ -42,7 +47,15 @@ export function TranscriptView({ generationId }: { generationId: string }) {
             <div className="space-y-3 px-4 pb-4 pt-1">
               {step.lines.map((l) => (
                 <div key={l.id} className="grid grid-cols-[5.5rem_1fr] gap-3 text-sm">
-                  <div className="ja pt-0.5 text-xs text-muted">{l.speakerName}</div>
+                  <div className="flex flex-col items-start gap-1.5">
+                    <span className="ja pt-0.5 text-xs text-muted">{l.speakerName}</span>
+                    <div className="flex flex-col gap-1.5">
+                      <PlayButton src={`/api/generations/${generationId}/segments/${l.id}/audio`} label={`Play: ${l.text}`} />
+                      {l.language === 'ja-JP' && (
+                        <FlashcardToggle card={cardFor(l, vocab, t.lessonId, generationId)} />
+                      )}
+                    </div>
+                  </div>
                   {l.language === 'en' ? (
                     <p className="text-muted">{l.text}</p>
                   ) : (
@@ -63,4 +76,12 @@ export function TranscriptView({ generationId }: { generationId: string }) {
       </div>
     </div>
   );
+}
+
+/** A line that is just one of the lesson's words toggles that vocabulary card; anything else is a phrase. */
+function cardFor(l: Transcript['steps'][number]['lines'][number], vocab: Vocab[], lessonId: string, generationId: string) {
+  const n = normJa(l.text);
+  const v = vocab.find((x) => [x.japanese, x.reading].some((f) => f.split('/').some((p) => normJa(p) === n)));
+  if (v) return { kind: 'vocab' as const, vocabId: v.id, lessonId, japanese: v.japanese, reading: v.reading, romaji: v.romaji, english: v.english };
+  return { kind: 'phrase' as const, japanese: l.text, reading: l.reading, romaji: l.romaji, english: l.translation || '(no translation)', lessonId, generationId, segmentId: l.id };
 }

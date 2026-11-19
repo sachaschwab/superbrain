@@ -6,6 +6,10 @@ import { getSettings } from '@/lib/settings';
 import { stepTargets } from '@/lib/config';
 import { exceedsLimit } from '@/lib/cost';
 import { LessonClient } from './LessonClient';
+import { loadCurriculum } from '@/lib/curriculum';
+import { listCards } from '@/lib/flashcards';
+import { FlashcardsProvider, FlashcardToggle } from '@/components/flashcards/FlashcardsProvider';
+import { RomajiText } from '@/components/RomajiText';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,8 +20,11 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
   const settings = getSettings();
   const estimate = await estimateFor(id, { mode: 'full' }, settings);
   const { lesson } = ctx;
+  const glossary = loadCurriculum().romajiGlossary;
+  const cards = listCards().map((c) => ({ key: c.key, id: c.id, pile: c.pile }));
 
   return (
+    <FlashcardsProvider initial={cards}>
     <div className="space-y-8">
       <Link href="/" className="text-sm text-muted hover:text-ink">← All lessons</Link>
 
@@ -35,6 +42,7 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
 
       <LessonClient
         lessonId={lesson.id}
+        vocab={lesson.vocabularyTargets}
         initialGenerations={listGenerations(id)}
         fullEstimate={estimate}
         fullExceedsLimit={exceedsLimit(settings, estimate)}
@@ -57,7 +65,10 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
                     <td className="ja py-2 pr-3 text-muted">{v.reading !== v.japanese ? v.reading : ''}</td>
                     <td className="py-2 pr-3 italic text-muted">{v.romaji}</td>
                     <td className="py-2 pr-3">{v.english}</td>
-                    <td className="hidden py-2 text-xs text-muted sm:table-cell">{v.partOfSpeech}</td>
+                    <td className="hidden py-2 pr-3 text-xs text-muted sm:table-cell">{v.partOfSpeech}</td>
+                    <td className="py-2 text-right">
+                      <FlashcardToggle card={{ kind: 'vocab', vocabId: v.id, lessonId: lesson.id, japanese: v.japanese, reading: v.reading, romaji: v.romaji, english: v.english }} />
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -73,7 +84,18 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
                     <span className="rounded bg-surface-2 px-1.5 text-xs text-muted">{g.role}</span>
                   </div>
                   <p className="ja mt-1 text-sm leading-relaxed text-muted">{g.explanation}</p>
-                  <ul className="ja mt-2 space-y-0.5 text-sm">{g.examples.map((e) => <li key={e}>・{e}</li>)}</ul>
+                  <ul className="mt-3 divide-y divide-line rounded-lg border border-line">
+                    {g.examples.map((e) => (
+                      <li key={e.japanese} className="flex items-start justify-between gap-3 px-3 py-2">
+                        <div>
+                          <div className="ja text-base">{e.japanese}</div>
+                          <div className="text-xs italic text-muted">{e.romaji}</div>
+                          <div className="text-sm">{e.english}</div>
+                        </div>
+                        <FlashcardToggle card={{ kind: 'phrase', lessonId: lesson.id, japanese: e.japanese, romaji: e.romaji, english: e.english }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -81,7 +103,7 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
 
           {lesson.teachingNotes && (
             <Card title="Teaching notes">
-              <p className="ja text-sm leading-relaxed text-muted">{lesson.teachingNotes}</p>
+              <p className="text-sm leading-relaxed text-muted"><RomajiText text={lesson.teachingNotes} glossary={glossary} /></p>
             </Card>
           )}
         </section>
@@ -134,6 +156,7 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
         </aside>
       </div>
     </div>
+    </FlashcardsProvider>
   );
 }
 

@@ -3,6 +3,8 @@ import { lessonSummaries } from '@/lib/generations';
 import { StatusBadge } from '@/components/StatusBadge';
 import { STEPS } from '@/lib/config';
 import { getSettings } from '@/lib/settings';
+import { listCards } from '@/lib/flashcards';
+import { FlashcardLauncher } from '@/components/flashcards/FlashcardLauncher';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,6 +13,8 @@ export default function CurriculumPage() {
   const generated = lessons.filter((l) => l.readyGenerationId).length;
   const minutes = getSettings().targetDurationMinutes;
   const totalHours = ((lessons.length * minutes) / 60).toFixed(1);
+  const counts = { vocab: {} as Record<number, number>, phrase: {} as Record<number, number> };
+  for (const c of listCards()) counts[c.kind][c.pile] = (counts[c.kind][c.pile] ?? 0) + 1;
 
   return (
     <div className="space-y-10">
@@ -38,6 +42,8 @@ export default function CurriculumPage() {
           listening with nothing new. Words and grammar from earlier lessons return in later ones.
         </p>
       </section>
+
+      <FlashcardLauncher counts={counts} />
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {lessons.map((l) => (

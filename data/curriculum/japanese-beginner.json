@@ -4,6 +4,95 @@
   "targetLanguage": "ja-JP",
   "explanationLanguage": "en",
   "version": 1,
+  "romajiGlossary": {
+    "〜くありません": "-ku arimasen",
+    "〜くないです": "-ku nai desu",
+    "〜じゃないです": "-ja nai desu",
+    "〜つ": "-tsu",
+    "〜人": "-nin / -jin",
+    "〜本": "-hon",
+    "〜杯": "-hai",
+    "〜枚": "-mai",
+    "い": "i",
+    "い/いで": "i / ide",
+    "いちひゃく": "ichihyaku",
+    "うん": "un",
+    "お客様": "okyakusama",
+    "お父さん/お母さん": "otōsan / okāsan",
+    "が": "ga",
+    "くじ": "kuji",
+    "ございます": "gozaimasu",
+    "ごふん": "gofun",
+    "さんじゅっぷん": "sanjuppun",
+    "さんびゃく": "sanbyaku",
+    "し/しち": "shi / shichi",
+    "しちじ": "shichiji",
+    "じゅっぷん": "juppun",
+    "た": "ta",
+    "ちがいます": "chigaimasu",
+    "ちゃだめ": "-cha dame",
+    "っ/ん": "tsu / n",
+    "ついたち": "tsuitachi",
+    "て": "te",
+    "で": "de",
+    "です": "desu",
+    "と": "to",
+    "どう": "dō",
+    "な": "na",
+    "ない": "nai",
+    "なな": "nana",
+    "に": "ni",
+    "に/へ": "ni / e",
+    "ね": "ne",
+    "の": "no",
+    "は": "wa",
+    "はいけない": "wa ikenai",
+    "はん": "han",
+    "ひゃく": "hyaku",
+    "ふつか": "futsuka",
+    "ふん/ぷん": "fun / pun",
+    "ます": "masu",
+    "もいい": "mo ii",
+    "よじ": "yoji",
+    "よん": "yon",
+    "七": "nana / shichi",
+    "七時": "shichiji",
+    "七時に起きます": "shichiji ni okimasu",
+    "三十分": "sanjuppun",
+    "三百": "sanbyaku",
+    "九時": "kuji",
+    "五分": "gofun",
+    "会います": "aimasu",
+    "何名様ですか": "nanmei-sama desu ka",
+    "十分": "juppun",
+    "半": "han",
+    "友達": "tomodachi",
+    "友達に会います": "tomodachi ni aimasu",
+    "四": "yon / shi",
+    "四時": "yoji",
+    "好き": "suki",
+    "寒いね": "samui ne",
+    "寒かったね": "samukatta ne",
+    "映画": "eiga",
+    "暑いですね": "atsui desu ne",
+    "歩いて": "aruite",
+    "泳ぐ": "oyogu",
+    "泳げる": "oyogeru",
+    "父/母/兄/妹": "chichi / haha / ani / imōto",
+    "猫がいる": "neko ga iru",
+    "行かない": "ikanai",
+    "行こう": "ikō",
+    "行った": "itta",
+    "行って": "itte",
+    "見た": "mita",
+    "誰": "dare",
+    "誰の": "dare no",
+    "静かだね": "shizuka da ne",
+    "面白かった": "omoshirokatta",
+    "駅で会いましょう": "eki de aimashō",
+    "高い": "takai",
+    "魚": "sakana"
+  },
   "lessons": [
     {
       "id": "ja-beginner-01",
@@ -121,9 +210,21 @@
           "role": "primary",
           "explanation": "は marks the topic (what we are talking about); です is the polite copula, roughly 'is/am/are'. Word order is topic – comment – です. は is written with the kana ha but pronounced wa as a particle.",
           "examples": [
-            "私は学生です。",
-            "私はアメリカ人です。",
-            "田中さんは先生です。"
+            {
+              "japanese": "私は学生です。",
+              "romaji": "watashi wa gakusei desu.",
+              "english": "I am a student."
+            },
+            {
+              "japanese": "私はアメリカ人です。",
+              "romaji": "watashi wa Amerika-jin desu.",
+              "english": "I am American."
+            },
+            {
+              "japanese": "田中さんは先生です。",
+              "romaji": "Tanaka-san wa sensei desu.",
+              "english": "Ms./Mr. Tanaka is a teacher."
+            }
           ]
         },
         {
@@ -132,9 +233,21 @@
           "role": "related",
           "explanation": "Adding か to the end of a polite sentence turns it into a yes/no question; intonation can rise, but か alone already marks the question. Answer with はい、そうです or いいえ、ちがいます.",
           "examples": [
-            "学生ですか。",
-            "はい、そうです。",
-            "いいえ、会社員です。"
+            {
+              "japanese": "学生ですか。",
+              "romaji": "gakusei desu ka.",
+              "english": "Are you a student?"
+            },
+            {
+              "japanese": "はい、そうです。",
+              "romaji": "hai, sō desu.",
+              "english": "Yes, that's right."
+            },
+            {
+              "japanese": "いいえ、会社員です。",
+              "romaji": "iie, kaishain desu.",
+              "english": "No, I'm a company employee."
+            }
           ]
         }
       ],
@@ -254,9 +367,21 @@
           "role": "primary",
           "explanation": "の links two nouns: the first describes or owns the second. 私の友達 = my friend; 会社の同僚 = a colleague from the company. The order is the reverse of English 'of'.",
           "examples": [
-            "私の母です。",
-            "会社の同僚です。",
-            "あの人は誰ですか。"
+            {
+              "japanese": "私の母です。",
+              "romaji": "watashi no haha desu.",
+              "english": "This is my mother."
+            },
+            {
+              "japanese": "会社の同僚です。",
+              "romaji": "kaisha no dōryō desu.",
+              "english": "She/He is a colleague from work."
+            },
+            {
+              "japanese": "あの人は誰ですか。",
+              "romaji": "ano hito wa dare desu ka.",
+              "english": "Who is that person?"
+            }
           ]
         },
         {
@@ -265,8 +390,16 @@
           "role": "related",
           "explanation": "も replaces は (or が) to mean 'also'. It attaches to the noun that is 'also' true.",
           "examples": [
-            "私も学生です。",
-            "兄も会社員です。"
+            {
+              "japanese": "私も学生です。",
+              "romaji": "watashi mo gakusei desu.",
+              "english": "I am a student too."
+            },
+            {
+              "japanese": "兄も会社員です。",
+              "romaji": "ani mo kaishain desu.",
+              "english": "My older brother is a company employee too."
+            }
           ]
         }
       ],
@@ -404,9 +537,21 @@
           "role": "primary",
           "explanation": "いくら means 'how much (money)'. Ask with N は いくらですか and answer with number + 円 です. Zero is ゼロ. Tens are built by multiplication then addition: 二十 (に・じゅう) = 20, 二十五 = 25.",
           "examples": [
-            "これはいくらですか。",
-            "百円です。",
-            "それは三十円です。"
+            {
+              "japanese": "これはいくらですか。",
+              "romaji": "kore wa ikura desu ka.",
+              "english": "How much is this?"
+            },
+            {
+              "japanese": "百円です。",
+              "romaji": "hyaku en desu.",
+              "english": "It's 100 yen."
+            },
+            {
+              "japanese": "それは三十円です。",
+              "romaji": "sore wa sanjū en desu.",
+              "english": "That one is 30 yen."
+            }
           ]
         },
         {
@@ -415,8 +560,16 @@
           "role": "related",
           "explanation": "これ = this (near me), それ = that (near you), あれ = that over there (far from both). They stand alone as pronouns; どれ asks 'which one'.",
           "examples": [
-            "これは何ですか。",
-            "あれはいくらですか。"
+            {
+              "japanese": "これは何ですか。",
+              "romaji": "kore wa nan desu ka.",
+              "english": "What is this?"
+            },
+            {
+              "japanese": "あれはいくらですか。",
+              "romaji": "are wa ikura desu ka.",
+              "english": "How much is that one over there?"
+            }
           ]
         }
       ],
@@ -551,9 +704,21 @@
           "role": "primary",
           "explanation": "Specific points in time (clock times, days of the week) take に when they modify a verb: 三時に起きます. With です alone, no に is needed: 会議は三時です. Relative words such as 今日, 明日 and 今 never take に. Verbs come in lesson 7, so here notice the pattern in listening only.",
           "examples": [
-            "テストは月曜日です。",
-            "パーティーは七時です。",
-            "明日は日曜日です。"
+            {
+              "japanese": "テストは月曜日です。",
+              "romaji": "tesuto wa getsuyōbi desu.",
+              "english": "The test is on Monday."
+            },
+            {
+              "japanese": "パーティーは七時です。",
+              "romaji": "pātī wa shichi-ji desu.",
+              "english": "The party is at seven."
+            },
+            {
+              "japanese": "明日は日曜日です。",
+              "romaji": "ashita wa nichiyōbi desu.",
+              "english": "Tomorrow is Sunday."
+            }
           ]
         },
         {
@@ -562,9 +727,21 @@
           "role": "related",
           "explanation": "いつ asks 'when' in general; 何時 (なんじ) asks 'what time'. 今、何時ですか = What time is it now?",
           "examples": [
-            "今、何時ですか。",
-            "九時十分です。",
-            "テストはいつですか。"
+            {
+              "japanese": "今、何時ですか。",
+              "romaji": "ima, nan-ji desu ka.",
+              "english": "What time is it now?"
+            },
+            {
+              "japanese": "九時十分です。",
+              "romaji": "ku-ji juppun desu.",
+              "english": "It's ten past nine."
+            },
+            {
+              "japanese": "テストはいつですか。",
+              "romaji": "tesuto wa itsu desu ka.",
+              "english": "When is the test?"
+            }
           ]
         }
       ],
@@ -701,9 +878,21 @@
           "role": "primary",
           "explanation": "この/その/あの must be followed by a noun (この本 = this book), while これ/それ/あれ stand alone (これ = this one). Same distance logic: near me / near you / far from both.",
           "examples": [
-            "この本は私のです。",
-            "その傘は誰のですか。",
-            "あのかばんは赤いです。"
+            {
+              "japanese": "この本は私のです。",
+              "romaji": "kono hon wa watashi no desu.",
+              "english": "This book is mine."
+            },
+            {
+              "japanese": "その傘は誰のですか。",
+              "romaji": "sono kasa wa dare no desu ka.",
+              "english": "Whose umbrella is that?"
+            },
+            {
+              "japanese": "あのかばんは赤いです。",
+              "romaji": "ano kaban wa akai desu.",
+              "english": "That bag over there is red."
+            }
           ]
         },
         {
@@ -712,9 +901,21 @@
           "role": "related",
           "explanation": "何ですか asks 'what is it?'. 何 is read なん before です and most counters. Colour words like 赤い can stand before a noun (赤いかばん) or at the end before です (かばんは赤いです).",
           "examples": [
-            "これは何ですか。",
-            "それは時計です。",
-            "私の携帯は黒いです。"
+            {
+              "japanese": "これは何ですか。",
+              "romaji": "kore wa nan desu ka.",
+              "english": "What is this?"
+            },
+            {
+              "japanese": "それは時計です。",
+              "romaji": "sore wa tokei desu.",
+              "english": "That is a watch."
+            },
+            {
+              "japanese": "私の携帯は黒いです。",
+              "romaji": "watashi no keitai wa kuroi desu.",
+              "english": "My phone is black."
+            }
           ]
         }
       ],
@@ -850,9 +1051,21 @@
           "role": "primary",
           "explanation": "Place words matching これ・それ・あれ: ここ = here, そこ = there (near you), あそこ = over there. どこ = where. トイレはどこですか = Where is the toilet?",
           "examples": [
-            "トイレはどこですか。",
-            "あそこです。",
-            "駅はここです。"
+            {
+              "japanese": "トイレはどこですか。",
+              "romaji": "toire wa doko desu ka.",
+              "english": "Where is the toilet?"
+            },
+            {
+              "japanese": "あそこです。",
+              "romaji": "asoko desu.",
+              "english": "It's over there."
+            },
+            {
+              "japanese": "駅はここです。",
+              "romaji": "eki wa koko desu.",
+              "english": "The station is here."
+            }
           ]
         },
         {
@@ -861,9 +1074,21 @@
           "role": "related",
           "explanation": "Existence: inanimate things あります, living people and animals います. Place takes に. Position words attach with の: 机の上に = on the desk.",
           "examples": [
-            "机の上に本があります。",
-            "部屋に猫がいます。",
-            "銀行の隣にコンビニがあります。"
+            {
+              "japanese": "机の上に本があります。",
+              "romaji": "tsukue no ue ni hon ga arimasu.",
+              "english": "There is a book on the desk."
+            },
+            {
+              "japanese": "部屋に猫がいます。",
+              "romaji": "heya ni neko ga imasu.",
+              "english": "There is a cat in the room."
+            },
+            {
+              "japanese": "銀行の隣にコンビニがあります。",
+              "romaji": "ginkō no tonari ni konbini ga arimasu.",
+              "english": "There is a convenience store next to the bank."
+            }
           ]
         }
       ],
@@ -1001,9 +1226,21 @@
           "role": "primary",
           "explanation": "Polite non-past verbs end in ます (affirmative) and ません (negative). Non-past covers habits and the future: 毎日起きます = I get up every day. Only the ます form is taught here; dictionary forms come later.",
           "examples": [
-            "毎日六時に起きます。",
-            "朝ご飯を食べません。",
-            "十一時に寝ます。"
+            {
+              "japanese": "毎日六時に起きます。",
+              "romaji": "mainichi roku-ji ni okimasu.",
+              "english": "I get up at six every day."
+            },
+            {
+              "japanese": "朝ご飯を食べません。",
+              "romaji": "asagohan o tabemasen.",
+              "english": "I don't eat breakfast."
+            },
+            {
+              "japanese": "十一時に寝ます。",
+              "romaji": "jūichi-ji ni nemasu.",
+              "english": "I go to bed at eleven."
+            }
           ]
         },
         {
@@ -1012,9 +1249,21 @@
           "role": "related",
           "explanation": "を marks what the action is done to. Japanese verbs come last: object を verb. を is pronounced o.",
           "examples": [
-            "テレビを見ます。",
-            "本を読みます。",
-            "仕事をします。"
+            {
+              "japanese": "テレビを見ます。",
+              "romaji": "terebi o mimasu.",
+              "english": "I watch TV."
+            },
+            {
+              "japanese": "本を読みます。",
+              "romaji": "hon o yomimasu.",
+              "english": "I read books."
+            },
+            {
+              "japanese": "仕事をします。",
+              "romaji": "shigoto o shimasu.",
+              "english": "I work."
+            }
           ]
         }
       ],
@@ -1151,9 +1400,21 @@
           "role": "primary",
           "explanation": "The thing liked is marked with が, not を: 魚が好きです = I like fish. Negative: 好きじゃないです (casual: 好きじゃない). あまり好きじゃないです softens it.",
           "examples": [
-            "私はコーヒーが好きです。",
-            "肉はあまり好きじゃないです。",
-            "何が好きですか。"
+            {
+              "japanese": "私はコーヒーが好きです。",
+              "romaji": "watashi wa kōhī ga suki desu.",
+              "english": "I like coffee."
+            },
+            {
+              "japanese": "肉はあまり好きじゃないです。",
+              "romaji": "niku wa amari suki ja nai desu.",
+              "english": "I don't really like meat."
+            },
+            {
+              "japanese": "何が好きですか。",
+              "romaji": "nani ga suki desu ka.",
+              "english": "What do you like?"
+            }
           ]
         },
         {
@@ -1162,8 +1423,16 @@
           "role": "related",
           "explanation": "N をください = Please give me N. Polite and common in shops; お願いします is slightly softer.",
           "examples": [
-            "水をください。",
-            "お茶をお願いします。"
+            {
+              "japanese": "水をください。",
+              "romaji": "mizu o kudasai.",
+              "english": "Water, please."
+            },
+            {
+              "japanese": "お茶をお願いします。",
+              "romaji": "ocha o onegai shimasu.",
+              "english": "Tea, please."
+            }
           ]
         }
       ],
@@ -1301,9 +1570,21 @@
           "role": "primary",
           "explanation": "Japanese counts with counters. The native counter 〜つ counts most things (1–10); 一人 and 二人 are irregular, from three people on use number + 人 (三人 = さんにん). Word order: noun を number verb — コーヒーを二つください.",
           "examples": [
-            "コーヒーを二つください。",
-            "二人です。",
-            "いくつですか。"
+            {
+              "japanese": "コーヒーを二つください。",
+              "romaji": "kōhī o futatsu kudasai.",
+              "english": "Two coffees, please."
+            },
+            {
+              "japanese": "二人です。",
+              "romaji": "futari desu.",
+              "english": "Two people. (a table for two)"
+            },
+            {
+              "japanese": "いくつですか。",
+              "romaji": "ikutsu desu ka.",
+              "english": "How many?"
+            }
           ]
         },
         {
@@ -1312,8 +1593,16 @@
           "role": "related",
           "explanation": "N をお願いします is a soft, polite way to order or request. お会計をお願いします = The bill, please.",
           "examples": [
-            "お水をお願いします。",
-            "お会計をお願いします。"
+            {
+              "japanese": "お水をお願いします。",
+              "romaji": "omizu o onegai shimasu.",
+              "english": "Some water, please."
+            },
+            {
+              "japanese": "お会計をお願いします。",
+              "romaji": "okaikei o onegai shimasu.",
+              "english": "The bill, please."
+            }
           ]
         }
       ],
@@ -1450,9 +1739,21 @@
           "role": "primary",
           "explanation": "Motion verbs take the destination with へ (direction, pronounced e) or に (arrival point). Both are natural with 行きます・来ます・帰ります.",
           "examples": [
-            "明日、東京へ行きます。",
-            "七時に家に帰ります。",
-            "駅に行きます。"
+            {
+              "japanese": "明日、東京へ行きます。",
+              "romaji": "ashita, Tōkyō e ikimasu.",
+              "english": "I'm going to Tokyo tomorrow."
+            },
+            {
+              "japanese": "七時に家に帰ります。",
+              "romaji": "shichi-ji ni uchi ni kaerimasu.",
+              "english": "I go home at seven."
+            },
+            {
+              "japanese": "駅に行きます。",
+              "romaji": "eki ni ikimasu.",
+              "english": "I'm going to the station."
+            }
           ]
         },
         {
@@ -1461,9 +1762,21 @@
           "role": "related",
           "explanation": "で marks the means: 電車で行きます = go by train. 'On foot' is 歩いて without で.",
           "examples": [
-            "バスで学校へ行きます。",
-            "飛行機で東京に来ます。",
-            "歩いて駅へ行きます。"
+            {
+              "japanese": "バスで学校へ行きます。",
+              "romaji": "basu de gakkō e ikimasu.",
+              "english": "I go to school by bus."
+            },
+            {
+              "japanese": "飛行機で東京に来ます。",
+              "romaji": "hikōki de Tōkyō ni kimasu.",
+              "english": "I'm coming to Tokyo by plane."
+            },
+            {
+              "japanese": "歩いて駅へ行きます。",
+              "romaji": "aruite eki e ikimasu.",
+              "english": "I walk to the station."
+            }
           ]
         }
       ],
@@ -1592,9 +1905,21 @@
           "role": "primary",
           "explanation": "Polite past: replace ます with ました (did) and ません with ませんでした (did not). Works for every verb learned so far.",
           "examples": [
-            "昨日、映画を見ました。",
-            "先週、友達に会いました。",
-            "昨日は学校へ行きませんでした。"
+            {
+              "japanese": "昨日、映画を見ました。",
+              "romaji": "kinō, eiga o mimashita.",
+              "english": "I watched a film yesterday."
+            },
+            {
+              "japanese": "先週、友達に会いました。",
+              "romaji": "senshū, tomodachi ni aimashita.",
+              "english": "I met a friend last week."
+            },
+            {
+              "japanese": "昨日は学校へ行きませんでした。",
+              "romaji": "kinō wa gakkō e ikimasen deshita.",
+              "english": "I didn't go to school yesterday."
+            }
           ]
         },
         {
@@ -1603,8 +1928,16 @@
           "role": "related",
           "explanation": "何も with a negative verb means 'nothing'. 何も買いませんでした = I bought nothing.",
           "examples": [
-            "何も食べませんでした。",
-            "昨日は何もしませんでした。"
+            {
+              "japanese": "何も食べませんでした。",
+              "romaji": "nani mo tabemasen deshita.",
+              "english": "I didn't eat anything."
+            },
+            {
+              "japanese": "昨日は何もしませんでした。",
+              "romaji": "kinō wa nani mo shimasen deshita.",
+              "english": "I did nothing yesterday."
+            }
           ]
         }
       ],
@@ -1743,9 +2076,21 @@
           "role": "primary",
           "explanation": "い-adjectives end in い and go straight before nouns (高い本) or before です (この本は高いです). Negative: replace い with くないです (高くないです). Irregular: いい → よくないです.",
           "examples": [
-            "この時計は高いです。",
-            "新しいかばんです。",
-            "あの映画は面白くないです。"
+            {
+              "japanese": "この時計は高いです。",
+              "romaji": "kono tokei wa takai desu.",
+              "english": "This watch is expensive."
+            },
+            {
+              "japanese": "新しいかばんです。",
+              "romaji": "atarashii kaban desu.",
+              "english": "It's a new bag."
+            },
+            {
+              "japanese": "あの映画は面白くないです。",
+              "romaji": "ano eiga wa omoshiroku nai desu.",
+              "english": "That film isn't interesting."
+            }
           ]
         },
         {
@@ -1754,9 +2099,21 @@
           "role": "related",
           "explanation": "な-adjectives take な before a noun (静かな部屋) and です at the end (部屋は静かです). Negative: じゃないです. Warning: きれい ends in い but is a な-adjective.",
           "examples": [
-            "東京は有名な町です。",
-            "この部屋は静かじゃないです。",
-            "とてもきれいですね。"
+            {
+              "japanese": "東京は有名な町です。",
+              "romaji": "Tōkyō wa yūmei na machi desu.",
+              "english": "Tokyo is a famous city."
+            },
+            {
+              "japanese": "この部屋は静かじゃないです。",
+              "romaji": "kono heya wa shizuka ja nai desu.",
+              "english": "This room isn't quiet."
+            },
+            {
+              "japanese": "とてもきれいですね。",
+              "romaji": "totemo kirei desu ne.",
+              "english": "It's very pretty, isn't it."
+            }
           ]
         }
       ],
@@ -1894,9 +2251,21 @@
           "role": "primary",
           "explanation": "〜はどうですか asks 'how is …?' and invites an adjective answer: 天気はどうですか → 寒いです. Noun weather words take です: 雨です.",
           "examples": [
-            "今日の天気はどうですか。",
-            "晴れです。",
-            "東京の夏はとても暑いです。"
+            {
+              "japanese": "今日の天気はどうですか。",
+              "romaji": "kyō no tenki wa dō desu ka.",
+              "english": "How is the weather today?"
+            },
+            {
+              "japanese": "晴れです。",
+              "romaji": "hare desu.",
+              "english": "It's sunny."
+            },
+            {
+              "japanese": "東京の夏はとても暑いです。",
+              "romaji": "Tōkyō no natsu wa totemo atsui desu.",
+              "english": "Summer in Tokyo is very hot."
+            }
           ]
         },
         {
@@ -1905,9 +2274,21 @@
           "role": "related",
           "explanation": "い-adjectives: 〜い → 〜かったです (寒かったです). な-adjectives and nouns: 〜でした (静かでした, 雨でした). Irregular: いい → よかったです.",
           "examples": [
-            "昨日は寒かったです。",
-            "週末は雨でした。",
-            "去年の冬は暖かかったです。"
+            {
+              "japanese": "昨日は寒かったです。",
+              "romaji": "kinō wa samukatta desu.",
+              "english": "It was cold yesterday."
+            },
+            {
+              "japanese": "週末は雨でした。",
+              "romaji": "shūmatsu wa ame deshita.",
+              "english": "It rained at the weekend."
+            },
+            {
+              "japanese": "去年の冬は暖かかったです。",
+              "romaji": "kyonen no fuyu wa atatakakatta desu.",
+              "english": "Last winter was warm."
+            }
           ]
         }
       ],
@@ -2038,9 +2419,21 @@
           "role": "primary",
           "explanation": "ほしい is an い-adjective meaning 'want (a thing)'. The thing wanted takes が: 新しい靴がほしいです. Used for the speaker's own wishes; for others it is avoided.",
           "examples": [
-            "新しいシャツがほしいです。",
-            "もっと小さいサイズがほしいです。",
-            "何がほしいですか。"
+            {
+              "japanese": "新しいシャツがほしいです。",
+              "romaji": "atarashii shatsu ga hoshii desu.",
+              "english": "I want a new shirt."
+            },
+            {
+              "japanese": "もっと小さいサイズがほしいです。",
+              "romaji": "motto chiisai saizu ga hoshii desu.",
+              "english": "I'd like a smaller size."
+            },
+            {
+              "japanese": "何がほしいですか。",
+              "romaji": "nani ga hoshii desu ka.",
+              "english": "What would you like?"
+            }
           ]
         },
         {
@@ -2049,9 +2442,21 @@
           "role": "related",
           "explanation": "A は B より adjective です = A is more … than B. Ask with A と B と どちらが 〜ですか and answer with 〜のほうが 〜です.",
           "examples": [
-            "このシャツはあのシャツより安いです。",
-            "黒と白とどちらがいいですか。",
-            "白いほうがいいです。"
+            {
+              "japanese": "このシャツはあのシャツより安いです。",
+              "romaji": "kono shatsu wa ano shatsu yori yasui desu.",
+              "english": "This shirt is cheaper than that shirt."
+            },
+            {
+              "japanese": "黒と白とどちらがいいですか。",
+              "romaji": "kuro to shiro to dochira ga ii desu ka.",
+              "english": "Which is better, black or white?"
+            },
+            {
+              "japanese": "白いほうがいいです。",
+              "romaji": "shiroi hō ga ii desu.",
+              "english": "The white one is better."
+            }
           ]
         }
       ],
@@ -2189,10 +2594,26 @@
           "role": "primary",
           "explanation": "Remove ます and look at the last sound. Group 2: just add て (食べ→食べて, 見せ→見せて). Irregular: し→して, 来→きて. Group 1: い/ち/り→って (待ち→待って, 送り→送って, 手伝い→手伝って); み/び/に→んで (読み→読んで, 飲み→飲んで); き→いて (書き→書いて, 聞き→聞いて); ぎ→いで; し→して. Exception: 行き→行って.",
           "examples": [
-            "見せます → 見せて",
-            "待ちます → 待って",
-            "読みます → 読んで",
-            "書きます → 書いて"
+            {
+              "japanese": "見せます → 見せて",
+              "romaji": "misemasu → misete",
+              "english": "show → te-form"
+            },
+            {
+              "japanese": "待ちます → 待って",
+              "romaji": "machimasu → matte",
+              "english": "wait → te-form"
+            },
+            {
+              "japanese": "読みます → 読んで",
+              "romaji": "yomimasu → yonde",
+              "english": "read → te-form"
+            },
+            {
+              "japanese": "書きます → 書いて",
+              "romaji": "kakimasu → kaite",
+              "english": "write → te-form"
+            }
           ]
         },
         {
@@ -2201,9 +2622,21 @@
           "role": "related",
           "explanation": "て-form + ください = please do …. Add ちょっと or 少し to soften. Recall 歩いて from lesson 10 — it was a て-form all along.",
           "examples": [
-            "資料を見せてください。",
-            "少し待ってください。",
-            "後でメールを送ってください。"
+            {
+              "japanese": "資料を見せてください。",
+              "romaji": "shiryō o misete kudasai.",
+              "english": "Please show me the documents."
+            },
+            {
+              "japanese": "少し待ってください。",
+              "romaji": "sukoshi matte kudasai.",
+              "english": "Please wait a moment."
+            },
+            {
+              "japanese": "後でメールを送ってください。",
+              "romaji": "ato de mēru o okutte kudasai.",
+              "english": "Please send me an email later."
+            }
           ]
         }
       ],
@@ -2332,9 +2765,21 @@
           "role": "primary",
           "explanation": "A negative question used as a gentle invitation: 一緒に行きませんか = Won't you come with me? It leaves room to refuse, so it is more polite than ましょう.",
           "examples": [
-            "今晩、一緒に映画を見ませんか。",
-            "土曜日に散歩しませんか。",
-            "いいですね。行きましょう。"
+            {
+              "japanese": "今晩、一緒に映画を見ませんか。",
+              "romaji": "konban, issho ni eiga o mimasen ka.",
+              "english": "Would you like to watch a film together tonight?"
+            },
+            {
+              "japanese": "土曜日に散歩しませんか。",
+              "romaji": "doyōbi ni sanpo shimasen ka.",
+              "english": "Shall we go for a walk on Saturday?"
+            },
+            {
+              "japanese": "いいですね。行きましょう。",
+              "romaji": "ii desu ne. ikimashō.",
+              "english": "Sounds good. Let's go."
+            }
           ]
         },
         {
@@ -2343,9 +2788,21 @@
           "role": "related",
           "explanation": "〜ましょう = let's …; 〜ましょうか = shall we …? / shall I …?. Polite refusal: ちょっと… or 残念ですが、〜は約束があります.",
           "examples": [
-            "何時に会いましょうか。",
-            "七時に駅で会いましょう。",
-            "残念ですが、来週はちょっと…。"
+            {
+              "japanese": "何時に会いましょうか。",
+              "romaji": "nan-ji ni aimashō ka.",
+              "english": "What time shall we meet?"
+            },
+            {
+              "japanese": "七時に駅で会いましょう。",
+              "romaji": "shichi-ji ni eki de aimashō.",
+              "english": "Let's meet at the station at seven."
+            },
+            {
+              "japanese": "残念ですが、来週はちょっと…。",
+              "romaji": "zannen desu ga, raishū wa chotto…",
+              "english": "Unfortunately, next week is a bit…"
+            }
           ]
         }
       ],
@@ -2482,9 +2939,21 @@
           "role": "primary",
           "explanation": "できます = can do. With a noun: 日本語ができます. With a verb: dictionary form + ことができます. Dictionary form from ます-stem: group 1 i→u (泳ぎ→泳ぐ, 弾き→弾く, 歌い→歌う), group 2 add る (食べ→食べる), irregular します→する, 来ます→来る.",
           "examples": [
-            "英語ができます。",
-            "ピアノを弾くことができます。",
-            "全然泳ぐことができません。"
+            {
+              "japanese": "英語ができます。",
+              "romaji": "eigo ga dekimasu.",
+              "english": "I can speak English."
+            },
+            {
+              "japanese": "ピアノを弾くことができます。",
+              "romaji": "piano o hiku koto ga dekimasu.",
+              "english": "I can play the piano."
+            },
+            {
+              "japanese": "全然泳ぐことができません。",
+              "romaji": "zenzen oyogu koto ga dekimasen.",
+              "english": "I can't swim at all."
+            }
           ]
         },
         {
@@ -2493,9 +2962,21 @@
           "role": "related",
           "explanation": "Skill: person は thing が 上手です. Saying 上手です about yourself sounds boastful; the modest reply to a compliment is いいえ、まだまだです.",
           "examples": [
-            "料理が上手ですね。",
-            "いいえ、まだまだです。",
-            "私は歌が下手です。"
+            {
+              "japanese": "料理が上手ですね。",
+              "romaji": "ryōri ga jōzu desu ne.",
+              "english": "You're a good cook."
+            },
+            {
+              "japanese": "いいえ、まだまだです。",
+              "romaji": "iie, madamada desu.",
+              "english": "No, I still have a long way to go."
+            },
+            {
+              "japanese": "私は歌が下手です。",
+              "romaji": "watashi wa uta ga heta desu.",
+              "english": "I'm bad at singing."
+            }
           ]
         }
       ],
@@ -2633,9 +3114,21 @@
           "role": "primary",
           "explanation": "Pain: body part + が 痛いです = My … hurts. 熱があります = I have a fever; 風邪をひきました = I caught a cold (fixed phrase). Ask: 大丈夫ですか.",
           "examples": [
-            "頭が痛いです。",
-            "熱があります。",
-            "大丈夫ですか。"
+            {
+              "japanese": "頭が痛いです。",
+              "romaji": "atama ga itai desu.",
+              "english": "I have a headache."
+            },
+            {
+              "japanese": "熱があります。",
+              "romaji": "netsu ga arimasu.",
+              "english": "I have a fever."
+            },
+            {
+              "japanese": "大丈夫ですか。",
+              "romaji": "daijōbu desu ka.",
+              "english": "Are you all right?"
+            }
           ]
         },
         {
@@ -2644,9 +3137,21 @@
           "role": "related",
           "explanation": "Casual negative of verbs. Group 1: change the ending to the あ-row + ない (休む→休まない, 飲む→飲まない; う→わない: 歌う→歌わない). Group 2: drop る + ない (食べる→食べない). Irregular: する→しない, 来る→こない.",
           "examples": [
-            "今日は仕事に行かない。",
-            "何も食べない。",
-            "大丈夫？ — うん、大丈夫。"
+            {
+              "japanese": "今日は仕事に行かない。",
+              "romaji": "kyō wa shigoto ni ikanai.",
+              "english": "I'm not going to work today. (casual)"
+            },
+            {
+              "japanese": "何も食べない。",
+              "romaji": "nani mo tabenai.",
+              "english": "I won't eat anything. (casual)"
+            },
+            {
+              "japanese": "大丈夫？ — うん、大丈夫。",
+              "romaji": "daijōbu? — un, daijōbu.",
+              "english": "You OK? — Yeah, I'm fine. (casual)"
+            }
           ]
         }
       ],
@@ -2785,9 +3290,21 @@
           "role": "primary",
           "explanation": "て-form + もいいですか = May I …? Answer はい、どうぞ or すみません、ちょっと….",
           "examples": [
-            "荷物を預けてもいいですか。",
-            "ここで写真を撮ってもいいですか。",
-            "はい、どうぞ。"
+            {
+              "japanese": "荷物を預けてもいいですか。",
+              "romaji": "nimotsu o azukete mo ii desu ka.",
+              "english": "May I leave my luggage?"
+            },
+            {
+              "japanese": "ここで写真を撮ってもいいですか。",
+              "romaji": "koko de shashin o totte mo ii desu ka.",
+              "english": "May I take photos here?"
+            },
+            {
+              "japanese": "はい、どうぞ。",
+              "romaji": "hai, dōzo.",
+              "english": "Yes, go ahead."
+            }
           ]
         },
         {
@@ -2796,8 +3313,16 @@
           "role": "related",
           "explanation": "て-form + はいけません = must not …. Strong; common on signs and rules. Polite refusal to a request uses ちょっと… instead.",
           "examples": [
-            "ここでたばこを吸ってはいけません。",
-            "部屋で料理をしてはいけません。"
+            {
+              "japanese": "ここでたばこを吸ってはいけません。",
+              "romaji": "koko de tabako o sutte wa ikemasen.",
+              "english": "You must not smoke here."
+            },
+            {
+              "japanese": "部屋で料理をしてはいけません。",
+              "romaji": "heya de ryōri o shite wa ikemasen.",
+              "english": "Cooking in the room is not allowed."
+            }
           ]
         }
       ],
@@ -2919,9 +3444,21 @@
           "role": "primary",
           "explanation": "Start a new sentence with でも (contrast), それから (sequence) or だから (reason → result) to connect ideas without new grammar.",
           "examples": [
-            "昨日は雨でした。でも、楽しかったです。",
-            "映画を見ました。それから、レストランへ行きました。",
-            "熱があります。だから、今日は休みます。"
+            {
+              "japanese": "昨日は雨でした。でも、楽しかったです。",
+              "romaji": "kinō wa ame deshita. demo, tanoshikatta desu.",
+              "english": "It rained yesterday. But it was fun."
+            },
+            {
+              "japanese": "映画を見ました。それから、レストランへ行きました。",
+              "romaji": "eiga o mimashita. sorekara, resutoran e ikimashita.",
+              "english": "I watched a film. Then I went to a restaurant."
+            },
+            {
+              "japanese": "熱があります。だから、今日は休みます。",
+              "romaji": "netsu ga arimasu. dakara, kyō wa yasumimasu.",
+              "english": "I have a fever. So I'm taking today off."
+            }
           ]
         },
         {
@@ -2930,9 +3467,21 @@
           "role": "related",
           "explanation": "Polite (です/ます) with strangers, colleagues and staff; casual with friends and family. Characters should switch only when the relationship justifies it.",
           "examples": [
-            "じゃあ、また来週。",
-            "本当にありがとうございました。",
-            "お疲れ様でした。"
+            {
+              "japanese": "じゃあ、また来週。",
+              "romaji": "jā, mata raishū.",
+              "english": "Well then, see you next week."
+            },
+            {
+              "japanese": "本当にありがとうございました。",
+              "romaji": "hontō ni arigatō gozaimashita.",
+              "english": "Thank you so much."
+            },
+            {
+              "japanese": "お疲れ様でした。",
+              "romaji": "otsukaresama deshita.",
+              "english": "Thank you for your hard work."
+            }
           ]
         }
       ],

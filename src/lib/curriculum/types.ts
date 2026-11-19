@@ -14,7 +14,7 @@ export const GrammarTargetSchema = z.object({
   name: z.string().min(1),
   role: z.enum(['primary', 'related']),
   explanation: z.string().min(1),
-  examples: z.array(z.string().min(1)).min(1),
+  examples: z.array(z.object({ japanese: z.string().min(1), romaji: z.string().min(1), english: z.string().min(1) })).min(1),
 });
 
 export const CurriculumLessonSchema = z.object({
@@ -39,6 +39,8 @@ export const CurriculumSchema = z.object({
   targetLanguage: z.literal('ja-JP'),
   explanationLanguage: z.string(),
   version: z.number(),
+  /** Romaji for Japanese snippets quoted in teaching notes. */
+  romajiGlossary: z.record(z.string(), z.string()).default({}),
   lessons: z.array(CurriculumLessonSchema).min(1),
 });
 

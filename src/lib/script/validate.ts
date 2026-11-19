@@ -24,7 +24,8 @@ const sentenceCount = (t: string) => t.split(/[。！？!?]/).filter((x) => x.tr
 const NARRATOR_STEPS = new Set([2, 5]);
 
 /** Normalise Japanese for comparisons: drop punctuation, whitespace and speaker-neutral marks. */
-export const normJa = (s: string) => s.replace(/[\s、。！？!?「」『』…・〜ー—\-.,]/g, '');
+import { normJa } from '../card-key';
+export { normJa };
 
 function stepSegments(segments: AudioSegment[], step: number) {
   return segments.filter((s) => s.stepNumber === step);

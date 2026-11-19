@@ -48,6 +48,19 @@ it exists to demonstrate and test the pipeline end to end.
 3. Generate **Lesson 1**, read the script ("Inspect script" / transcript), and listen to it in bed
    before producing the rest.
 
+## Flashcards
+
+- **Adding cards:** the card icon next to each vocabulary word, grammar example and transcript line
+  adds it to your flashcards. A filled icon means the item is already a card; click again to remove it.
+  The same word or phrase toggles the same card wherever it appears.
+- **Studying:** pick a direction on the main page — English → Japanese, Romaji → English, Japanese
+  (writing + audio) → English, or audio only → English — and whether to cover vocabulary, phrases or both.
+- **Piles:** classic three-pile system. “Knew it” moves a card up a pile, and after Pile 3 it counts as
+  learned; “Not yet” moves it back one. Under “All cards” you can move any card by hand or remove it.
+  Keys: space flips, → knew it, ← not yet.
+- **Audio:** transcript phrases replay their exact lesson recording at no cost. Words and example
+  sentences are voiced once with your current voices and cached.
+
 ## How it works
 
 ```
@@ -120,7 +133,7 @@ scripts/smoke.ts                          API end-to-end smoke test
 ## Tests
 
 ```bash
-npm test                    # 35 unit + integration tests (mock LLM/TTS, real FFmpeg)
+npm test                    # 40 unit + integration tests (mock LLM/TTS, real FFmpeg)
 npm run validate:curriculum
 # end-to-end against a running server in mock mode:
 LLM_PROVIDER=mock TTS_PROVIDER=mock npm run dev

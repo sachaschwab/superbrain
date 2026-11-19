@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { getGenerationView } from '@/lib/generations';
 import type { CostEstimate } from '@/lib/cost';
+import type { VocabularyTarget } from '@/lib/curriculum/types';
 import { StatusBadge, isActive } from '@/components/StatusBadge';
 import { TranscriptView } from '@/components/TranscriptView';
 import { ScriptView } from '@/components/ScriptView';
@@ -12,6 +13,7 @@ import { AudioPlayer } from '@/components/AudioPlayer';
 type Gen = NonNullable<ReturnType<typeof getGenerationView>>;
 type Props = {
   lessonId: string;
+  vocab: VocabularyTarget[];
   initialGenerations: Gen[];
   fullEstimate: CostEstimate;
   fullExceedsLimit: boolean;
@@ -33,7 +35,7 @@ function describeEstimate(e: CostEstimate) {
   return price ? `≈ ${price} (${parts.join(', ')})` : `${parts.join(', ')}${e.missingPrices.length ? ' · add prices in Settings to see cost' : ''}`;
 }
 
-export function LessonClient({ lessonId, initialGenerations, fullEstimate, fullExceedsLimit, limitUsd, providers }: Props) {
+export function LessonClient({ lessonId, vocab, initialGenerations, fullEstimate, fullExceedsLimit, limitUsd, providers }: Props) {
   const router = useRouter();
   const [gens, setGens] = useState<Gen[]>(initialGenerations);
   const [selectedId, setSelectedId] = useState<string | null>(initialGenerations.find((g) => g.status === 'ready')?.id ?? null);
@@ -224,7 +226,7 @@ export function LessonClient({ lessonId, initialGenerations, fullEstimate, fullE
         </details>
       )}
 
-      {panel === 'transcript' && selected && <TranscriptView generationId={selected.id} />}
+      {panel === 'transcript' && selected && <TranscriptView generationId={selected.id} vocab={vocab} />}
       {panel === 'script' && (selected ?? latestWithScript) && <ScriptView generationId={(selected ?? latestWithScript)!.id} />}
 
       {/* History */}

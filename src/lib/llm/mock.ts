@@ -60,7 +60,7 @@ export function buildMockScript(ctx: LessonContext, settings: Settings): LessonS
     parts.forEach((p, i) => explain(step, p.charAt(0).toUpperCase() + p.slice(1) + '.', i === parts.length - 1 ? pause : 600));
   };
 
-  const examples = lesson.grammarTargets.flatMap((g) => g.examples).filter((e) => !/[→—]/.test(e));
+  const examples = lesson.grammarTargets.flatMap((g) => g.examples.map((e) => e.japanese)).filter((e) => !/[→—]/.test(e));
   const vocabLines = lesson.vocabularyTargets.map((v) => `${first(v.japanese)}。`);
   const dialogue = [...examples, ...vocabLines].slice(0, Math.max(settings.dialogueTurnsMin, Math.min(6, settings.dialogueTurnsMax)));
   const speakerAt = (i: number): Speaker => (i % 2 === 0 ? 'female' : 'male');

@@ -99,3 +99,30 @@ export const settings = sqliteTable('settings', {
   valueJson: text('value_json').notNull(),
   updatedAt: integer('updated_at', { mode: 'timestamp_ms' }).notNull().$defaultFn(now),
 });
+
+/** 1–3 = Leitner piles, 4 = learned (out of the rotation). */
+export const FLASHCARD_PILES = [1, 2, 3, 4] as const;
+
+export const flashcards = sqliteTable(
+  'flashcards',
+  {
+    id: text('id').primaryKey(),
+    /** vocab:<vocabId> or phrase:<normalised Japanese> — lets the same item be toggled from anywhere. */
+    key: text('key').notNull().unique(),
+    kind: text('kind').$type<'vocab' | 'phrase'>().notNull(),
+    japanese: text('japanese').notNull(),
+    reading: text('reading').notNull().default(''),
+    romaji: text('romaji').notNull().default(''),
+    english: text('english').notNull(),
+    lessonId: text('lesson_id'),
+    vocabId: text('vocab_id'),
+    /** For phrases taken from a transcript: reuse that exact recording. */
+    generationId: text('generation_id'),
+    segmentId: text('segment_id'),
+    pile: integer('pile').notNull().default(1),
+    reviewCount: integer('review_count').notNull().default(0),
+    reviewedAt: integer('reviewed_at', { mode: 'timestamp_ms' }),
+    createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull().$defaultFn(now),
+  },
+  (t) => [index('flashcards_pile_idx').on(t.pile)]
+);

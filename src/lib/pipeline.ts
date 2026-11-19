@@ -120,6 +120,8 @@ export async function runGeneration(generationId: string, update: PhaseUpdate, d
   // Phase E — assembly
   const dir = generationDir(generationId);
   await mkdir(dir, { recursive: true });
+  // Segment → clip map, so single phrases can be replayed later without re-synthesis.
+  await writeFile(path.join(dir, 'segments.json'), JSON.stringify(Object.fromEntries(segs.map((s, i) => [s.id, path.basename(files[i])]))));
   const audioPath = path.join(dir, 'lesson.mp3');
   update('audio_assembly', 0.82, 'Normalising clips and assembling the MP3…');
   const { duration } = await assembleLesson(

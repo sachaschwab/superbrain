@@ -87,6 +87,25 @@ export function cacheKey(provider: TtsProvider, req: TtsRequest) {
     .slice(0, 32);
 }
 
+/**
+ * Cache key as computed before the 18 Nov 2026 change (no language/context fields, older delivery
+ * speeds). Lets per-phrase playback reuse clips of generations made with that version.
+ */
+const LEGACY_DELIVERY: Record<SpeechRate, { speed: number; stability: number }> = {
+  slow: { speed: 0.8, stability: 0.6 },
+  medium: { speed: 0.92, stability: 0.55 },
+  natural: { speed: 1.0, stability: 0.5 },
+  gentle: { speed: 0.88, stability: 0.7 },
+};
+export function legacyCacheKey(provider: { name: string; model: string }, seg: AudioSegment, settings: Settings) {
+  const d = LEGACY_DELIVERY[seg.speechRate];
+  const speed = Math.min(1.2, Math.max(0.7, +(d.speed * settings.speechSpeed).toFixed(3)));
+  return createHash('sha256')
+    .update(JSON.stringify([provider.name, provider.model, voiceFor(seg, settings), speed, d.stability, seg.text]))
+    .digest('hex')
+    .slice(0, 32);
+}
+
 export const cachePath = (key: string) => path.join(TTS_CACHE_DIR, `${key}.mp3`);
 
 const inFlight = new Map<string, Promise<{ file: string; cached: boolean; characters: number }>>();
