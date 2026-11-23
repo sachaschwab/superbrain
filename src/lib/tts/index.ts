@@ -37,18 +37,38 @@ export function voiceFor(seg: Pick<AudioSegment, 'speaker' | 'language'>, settin
 
 const KANA_ONLY = /^[\u3040-\u30ffー・、。！？\s]+$/;
 const strip = (s: string) => s.replace(/[\s、。！？!?「」…・〜]/g, '');
+/** 〜 marks an affix slot in vocabulary lists (〜分, お〜). It is never spoken. */
+const AFFIX = /[〜~～]/;
+const dropAffix = (s: string) => s.replace(/[〜~～]/g, '').trim();
+
+/**
+ * Readings a voice performs rather than reads: a repeated h-row unit (はは, ふふ, へへ) is how
+ * laughter is written, so 母 sent as はは came out as a laugh. Kept narrow on purpose: for other
+ * words the kanji alone can be the riskier choice (七 → shichi instead of なな, 下手 → shimote).
+ */
+const misreadable = (kana: string) => /^([はひふへほハヒフヘホ][ぁぃぅぇぉゃゅょっー]?)\1+$/.test(kana);
 
 /**
  * Text actually sent to the voice. Single Japanese words heard on their own (vocabulary drills)
  * are sent as their kana reading: kanji like 私 or 日本 have several readings, and a lone word
  * gives the model too little context to sound Japanese. The transcript keeps the kanji.
+ * Exception: readings that would be misread (see misreadable) keep the kanji (母, 父).
  */
 export function speechText(seg: AudioSegment): string {
   if (seg.language !== 'ja-JP') return seg.text.replace(/\s*\/\s*/g, ' or ');
+
+  // Affix items (〜分 = 〜ふん / 〜ぷん): say each reading in kana. The bare kanji would get another
+  // reading (分 alone is ぶん), and 〜 itself makes the model improvise.
+  if (AFFIX.test(seg.text)) {
+    const parts = seg.transcript.reading.split(/\s*[\/／,，、]\s*/).map(dropAffix).filter(Boolean);
+    if (parts.length && parts.every((r) => KANA_ONLY.test(r))) return `${parts.map(strip).join('、')}。`;
+    return dropAffix(seg.text) || seg.text;
+  }
+
   const reading = seg.transcript.reading.trim();
   const core = strip(seg.text);
-  // Single words only: ≤4 characters, containing kanji, and no は/へ that could be particles (read wa/e).
-  if (core.length <= 4 && /[\u4e00-\u9fff]/.test(core) && !/[はへ]/.test(core) && reading && KANA_ONLY.test(reading)) {
+  // Single words only: ≤4 characters, containing kanji, with a pure-kana reading that won't be misread.
+  if (core.length <= 4 && /[\u4e00-\u9fff]/.test(core) && !/[はへ]/.test(core) && reading && KANA_ONLY.test(reading) && !misreadable(strip(reading))) {
     return /[。！？?!]$/.test(reading) ? reading : `${reading}。`;
   }
   return seg.text;

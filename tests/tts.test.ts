@@ -26,6 +26,25 @@ describe('what is sent to the voice', () => {
     expect(speechText(seg({ transcript: { ...seg({}).transcript, reading: '私' } }))).toBe('私。');
   });
 
+  it('keeps the kanji when the kana reading would be misread', () => {
+    const tr = seg({}).transcript;
+    // はは is written laughter (and は can be read "wa"): 母 stays 母
+    expect(speechText(seg({ text: '母。', transcript: { ...tr, reading: 'はは。' } }))).toBe('母。');
+    expect(speechText(seg({ text: 'ふふ', transcript: { ...tr, reading: 'ふふ' } }))).toBe('ふふ'); // no kanji: unchanged
+    // only laughter-like readings: these stay kana, where the bare kanji would be ambiguous or fine
+    expect(speechText(seg({ text: '七', transcript: { ...tr, reading: 'なな' } }))).toBe('なな。');
+    expect(speechText(seg({ text: '下手', transcript: { ...tr, reading: 'へた' } }))).toBe('へた。');
+    expect(speechText(seg({ text: '父', transcript: { ...tr, reading: 'ちち' } }))).toBe('ちち。');
+    expect(speechText(seg({ text: '学生。', transcript: { ...tr, reading: 'がくせい。' } }))).toBe('がくせい。');
+  });
+
+  it('never speaks the 〜 affix marker and says each alternative reading', () => {
+    const tr = seg({}).transcript;
+    expect(speechText(seg({ text: '〜分', transcript: { ...tr, reading: '〜ふん / 〜ぷん' } }))).toBe('ふん、ぷん。');
+    expect(speechText(seg({ text: '〜時', transcript: { ...tr, reading: '〜じ' } }))).toBe('じ。');
+    expect(speechText(seg({ text: 'お〜', transcript: { ...tr, reading: '' } }))).toBe('お');
+  });
+
   it('never sends a slash between English alternatives', () => {
     expect(speechText(seg({ language: 'en', speaker: 'narrator', text: 'yes / no' }))).toBe('yes or no');
   });
