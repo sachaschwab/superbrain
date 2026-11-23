@@ -60,6 +60,11 @@ it exists to demonstrate and test the pipeline end to end.
   Keys: space flips, → knew it, ← not yet.
 - **Audio:** transcript phrases replay their exact lesson recording at no cost. Words and example
   sentences are voiced once with your current voices and cached.
+- **Audio drill:** “Make audio drill” on the Flashcards page builds one MP3 from the selected cards
+  (vocabulary/phrases and the piles you tick): English, a pause to think (3 s for words, 4–7 s for
+  phrases), then the Japanese once. Pile 1 cards are heard 4×, Pile 2 3×, Pile 3 2×, Learned once,
+  coming back after roughly 3, 7 and 15 other prompts. Tune it in `src/lib/drill-plan.ts`.
+  The last 5 drills are kept in `data/drills/`.
 
 ## How it works
 

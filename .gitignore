@@ -12,3 +12,4 @@ test-data/
 instructions.txt
 .DS_Store
 *.nosync
+data/drills/

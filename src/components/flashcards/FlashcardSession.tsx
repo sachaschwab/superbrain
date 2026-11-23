@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { Flashcard } from '@/lib/flashcards';
 import { PlayButton } from '../PlayButton';
+import { DrillPanel } from './DrillPanel';
 import { KINDS, MODES, PILES, type KindId, type ModeId } from './modes';
 
 const shuffle = <T,>(a: T[]) => {
@@ -155,6 +156,8 @@ export function FlashcardSession({ initialCards, initialMode, initialKinds }: Pr
           </>
         ) : null}
       </section>
+
+      <DrillPanel cards={cards} kinds={kinds} />
 
       {/* Piles overview with manual moves */}
       <details className="rounded-xl border border-line bg-surface p-5" open={scoped.length > 0 && scoped.length <= 40}>
